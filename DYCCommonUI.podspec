@@ -20,15 +20,16 @@ Pod::Spec.new do |s|
   s.summary      = "public UI"
 
   s.description  = <<-DESC
+                    public UI that all project can use
                    DESC
 
   s.homepage     = "https://github.com/TyrantDante/DYCCommonUI"
 
 
-  s.license      = "MIT (example)"
+  s.license      = "LICENSE"
 
 
-  s.author             = { "TyrantDante" => "804054226@qq.com" }
+  s.author       = { "TyrantDante" => "804054226@qq.com" }
 
 
   s.platform     = :ios, "7.0"
@@ -36,7 +37,7 @@ Pod::Spec.new do |s|
 
   s.source       = { :git => "https://github.com/TyrantDante/DYCCommonUI.git", :tag => "0.0.1" }
 
-  s.source_files  = "Classes", "Classes/**/*.{h,m}"
+  s.source_files  = "RouteMe/*"
   s.exclude_files = "Classes/Exclude"
 
   # s.public_header_files = "Classes/**/*.h"
