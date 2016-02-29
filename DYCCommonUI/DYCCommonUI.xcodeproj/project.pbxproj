@@ -25,6 +25,8 @@
 		89D9EDE91C803D94001AAE27 /* icon_heart@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 89D9EDE01C803D94001AAE27 /* icon_heart@2x.png */; };
 		89D9EDEA1C803D94001AAE27 /* icon_heart@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 89D9EDE11C803D94001AAE27 /* icon_heart@3x.png */; };
 		89D9EDED1C80490E001AAE27 /* DYCLitteEvaHeartView.m in Sources */ = {isa = PBXBuildFile; fileRef = 89D9EDEC1C80490E001AAE27 /* DYCLitteEvaHeartView.m */; };
+		FE6439CC1C84105C00E82510 /* DYCTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = FE6439CB1C84105C00E82510 /* DYCTextView.m */; };
+		FE6439CF1C841B9F00E82510 /* DYCEvaluationPopUp.m in Sources */ = {isa = PBXBuildFile; fileRef = FE6439CE1C841B9F00E82510 /* DYCEvaluationPopUp.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -73,6 +75,10 @@
 		89D9EDE11C803D94001AAE27 /* icon_heart@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_heart@3x.png"; sourceTree = "<group>"; };
 		89D9EDEB1C80490E001AAE27 /* DYCLitteEvaHeartView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DYCLitteEvaHeartView.h; sourceTree = "<group>"; };
 		89D9EDEC1C80490E001AAE27 /* DYCLitteEvaHeartView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DYCLitteEvaHeartView.m; sourceTree = "<group>"; };
+		FE6439CA1C84105C00E82510 /* DYCTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DYCTextView.h; sourceTree = "<group>"; };
+		FE6439CB1C84105C00E82510 /* DYCTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DYCTextView.m; sourceTree = "<group>"; };
+		FE6439CD1C841B9F00E82510 /* DYCEvaluationPopUp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DYCEvaluationPopUp.h; sourceTree = "<group>"; };
+		FE6439CE1C841B9F00E82510 /* DYCEvaluationPopUp.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DYCEvaluationPopUp.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -170,6 +176,10 @@
 				89D9EDD61C803C73001AAE27 /* DYCBigEvaHeartView.m */,
 				89D9EDEB1C80490E001AAE27 /* DYCLitteEvaHeartView.h */,
 				89D9EDEC1C80490E001AAE27 /* DYCLitteEvaHeartView.m */,
+				FE6439CA1C84105C00E82510 /* DYCTextView.h */,
+				FE6439CB1C84105C00E82510 /* DYCTextView.m */,
+				FE6439CD1C841B9F00E82510 /* DYCEvaluationPopUp.h */,
+				FE6439CE1C841B9F00E82510 /* DYCEvaluationPopUp.m */,
 			);
 			path = CommonUI;
 			sourceTree = "<group>";
@@ -257,6 +267,7 @@
 				TargetAttributes = {
 					89D9EDA01C80373E001AAE27 = {
 						CreatedOnToolsVersion = 7.2;
+						DevelopmentTeam = Y6Q6HX38R8;
 					};
 					89D9EDB31C80373E001AAE27 = {
 						CreatedOnToolsVersion = 7.2;
@@ -328,6 +339,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FE6439CC1C84105C00E82510 /* DYCTextView.m in Sources */,
+				FE6439CF1C841B9F00E82510 /* DYCEvaluationPopUp.m in Sources */,
 				89D9EDD71C803C73001AAE27 /* DYCBigEvaHeartView.m in Sources */,
 				89D9EDD31C803757001AAE27 /* TestViewController.m in Sources */,
 				89D9EDA91C80373E001AAE27 /* AppDelegate.m in Sources */,
@@ -463,6 +476,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = DYCCommonUI/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.naXing.DYCCommonUI;
@@ -474,6 +488,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = DYCCommonUI/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.naXing.DYCCommonUI;
@@ -548,6 +563,7 @@
 				89D9EDCA1C80373E001AAE27 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		89D9EDCB1C80373E001AAE27 /* Build configuration list for PBXNativeTarget "DYCCommonUITests" */ = {
 			isa = XCConfigurationList;
@@ -556,6 +572,7 @@
 				89D9EDCD1C80373E001AAE27 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		89D9EDCE1C80373E001AAE27 /* Build configuration list for PBXNativeTarget "DYCCommonUIUITests" */ = {
 			isa = XCConfigurationList;
@@ -564,6 +581,7 @@
 				89D9EDD01C80373E001AAE27 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

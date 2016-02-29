@@ -9,5 +9,11 @@
 #import <UIKit/UIKit.h>
 
 @interface DYCLitteEvaHeartView : UIView
-@property (nonatomic,assign) NSInteger score;
+
+//default is heart.png
+@property (nonatomic,strong) UIImage *selectImage;
+//default is head_empty.png
+@property (nonatomic,strong) UIImage *normalImage;
+
+- (instancetype)initWithTotalScroe:(NSInteger)totalScore curScore:(NSInteger)curScore;
 @end

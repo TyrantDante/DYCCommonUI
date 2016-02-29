@@ -1,0 +1,28 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "A5DD208D4703B0250FDB41101B9137CFBBFE077C",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "A5DD208D4703B0250FDB41101B9137CFBBFE077C" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "B482C247-7C2A-4176-B8A1-1BAB12BCC133",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "A5DD208D4703B0250FDB41101B9137CFBBFE077C" : ""
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "DYCCommonUI",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "DYCCommonUI\/DYCCommonUI.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/TyrantDante\/DYCCommonUI.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "A5DD208D4703B0250FDB41101B9137CFBBFE077C"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/TyrantDante\/DYCCommonUI.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "A5DD208D4703B0250FDB41101B9137CFBBFE077C"
+    }
+  ]
+}
