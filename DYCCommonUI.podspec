@@ -50,7 +50,7 @@ Pod::Spec.new do |s|
   #
 
   # s.resource  = "icon.png"
-  # s.resources = "Resources/*.png"
+  s.resources = "DYCCommonUI/Resource/*"
 
   # s.preserve_paths = "FilesToSave", "MoreFilesToSave"
 
@@ -61,7 +61,7 @@ Pod::Spec.new do |s|
   #  the lib prefix of their name.
   #
 
-  # s.framework  = "SomeFramework"
+  # s.framework  = "DYCCommonUI"
   # s.frameworks = "SomeFramework", "AnotherFramework"
 
   # s.library   = "iconv"
