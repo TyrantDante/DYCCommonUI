@@ -9,7 +9,7 @@
 #import "TestViewController.h"
 #import "DYCBigEvaHeartView.h"
 #import "DYCLitteEvaHeartView.h"
-#import "DYCTextView.h"
+#import "DYCHolderTextView.h"
 #import "DYCEvaluationPopUp.h"
 #import "UIScrollView+DYC.h"
 @interface TestViewController()

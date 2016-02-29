@@ -25,7 +25,7 @@
 		89D9EDE91C803D94001AAE27 /* icon_heart@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 89D9EDE01C803D94001AAE27 /* icon_heart@2x.png */; };
 		89D9EDEA1C803D94001AAE27 /* icon_heart@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 89D9EDE11C803D94001AAE27 /* icon_heart@3x.png */; };
 		89D9EDED1C80490E001AAE27 /* DYCLitteEvaHeartView.m in Sources */ = {isa = PBXBuildFile; fileRef = 89D9EDEC1C80490E001AAE27 /* DYCLitteEvaHeartView.m */; };
-		FE6439CC1C84105C00E82510 /* DYCTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = FE6439CB1C84105C00E82510 /* DYCTextView.m */; };
+		FE6439CC1C84105C00E82510 /* DYCHolderTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = FE6439CB1C84105C00E82510 /* DYCHolderTextView.m */; };
 		FE6439CF1C841B9F00E82510 /* DYCEvaluationPopUp.m in Sources */ = {isa = PBXBuildFile; fileRef = FE6439CE1C841B9F00E82510 /* DYCEvaluationPopUp.m */; };
 		FE6439D21C8446F300E82510 /* UIScrollView+DYC.m in Sources */ = {isa = PBXBuildFile; fileRef = FE6439D11C8446F300E82510 /* UIScrollView+DYC.m */; };
 /* End PBXBuildFile section */
@@ -76,8 +76,8 @@
 		89D9EDE11C803D94001AAE27 /* icon_heart@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_heart@3x.png"; sourceTree = "<group>"; };
 		89D9EDEB1C80490E001AAE27 /* DYCLitteEvaHeartView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DYCLitteEvaHeartView.h; sourceTree = "<group>"; };
 		89D9EDEC1C80490E001AAE27 /* DYCLitteEvaHeartView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DYCLitteEvaHeartView.m; sourceTree = "<group>"; };
-		FE6439CA1C84105C00E82510 /* DYCTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DYCTextView.h; sourceTree = "<group>"; };
-		FE6439CB1C84105C00E82510 /* DYCTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DYCTextView.m; sourceTree = "<group>"; };
+		FE6439CA1C84105C00E82510 /* DYCHolderTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DYCHolderTextView.h; sourceTree = "<group>"; };
+		FE6439CB1C84105C00E82510 /* DYCHolderTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DYCHolderTextView.m; sourceTree = "<group>"; };
 		FE6439CD1C841B9F00E82510 /* DYCEvaluationPopUp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DYCEvaluationPopUp.h; sourceTree = "<group>"; };
 		FE6439CE1C841B9F00E82510 /* DYCEvaluationPopUp.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DYCEvaluationPopUp.m; sourceTree = "<group>"; };
 		FE6439D01C8446F300E82510 /* UIScrollView+DYC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIScrollView+DYC.h"; sourceTree = "<group>"; };
@@ -179,8 +179,8 @@
 				89D9EDD61C803C73001AAE27 /* DYCBigEvaHeartView.m */,
 				89D9EDEB1C80490E001AAE27 /* DYCLitteEvaHeartView.h */,
 				89D9EDEC1C80490E001AAE27 /* DYCLitteEvaHeartView.m */,
-				FE6439CA1C84105C00E82510 /* DYCTextView.h */,
-				FE6439CB1C84105C00E82510 /* DYCTextView.m */,
+				FE6439CA1C84105C00E82510 /* DYCHolderTextView.h */,
+				FE6439CB1C84105C00E82510 /* DYCHolderTextView.m */,
 				FE6439CD1C841B9F00E82510 /* DYCEvaluationPopUp.h */,
 				FE6439CE1C841B9F00E82510 /* DYCEvaluationPopUp.m */,
 				FE6439D01C8446F300E82510 /* UIScrollView+DYC.h */,
@@ -345,7 +345,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FE6439D21C8446F300E82510 /* UIScrollView+DYC.m in Sources */,
-				FE6439CC1C84105C00E82510 /* DYCTextView.m in Sources */,
+				FE6439CC1C84105C00E82510 /* DYCHolderTextView.m in Sources */,
 				FE6439CF1C841B9F00E82510 /* DYCEvaluationPopUp.m in Sources */,
 				89D9EDD71C803C73001AAE27 /* DYCBigEvaHeartView.m in Sources */,
 				89D9EDD31C803757001AAE27 /* TestViewController.m in Sources */,

@@ -7,7 +7,7 @@
 //
 
 #import "DYCEvaluationPopUp.h"
-#import "DYCTextView.h"
+#import "DYCHolderTextView.h"
 #import "DYCBigEvaHeartView.h"
 #define TITLE_FONT      [UIFont systemFontOfSize:16]
 #define SUB_FONT        [UIFont systemFontOfSize:13]
@@ -18,8 +18,8 @@
 @interface DYCEvaluationPopUp()
 @property (nonatomic,strong) DYCBigEvaHeartView *toJSEvaView;
 @property (nonatomic,strong) DYCBigEvaHeartView *toGWEvaView;
-@property (nonatomic,strong) DYCTextView *toJSTextView;
-@property (nonatomic,strong) DYCTextView *toGWTextView;
+@property (nonatomic,strong) DYCHolderTextView *toJSTextView;
+@property (nonatomic,strong) DYCHolderTextView *toGWTextView;
 
 @property (nonatomic,strong) NSString *toJSExp;
 @property (nonatomic,strong) NSString *toGWExp;
@@ -41,7 +41,7 @@
         };
         [self addSubview:_toJSEvaView];
         
-        _toJSTextView = [[DYCTextView alloc] init];
+        _toJSTextView = [[DYCHolderTextView alloc] init];
         _toJSTextView.placeHolder = @"你想说的话……";
         _toJSTextView.font = [UIFont systemFontOfSize:13];
         _toJSTextView.clipsToBounds = YES;
@@ -60,7 +60,7 @@
         };
         [self addSubview:_toGWEvaView];
         
-        _toGWTextView = [[DYCTextView alloc] init];
+        _toGWTextView = [[DYCHolderTextView alloc] init];
         _toGWTextView.placeHolder = @"你想说的话……";
         _toGWTextView.font = [UIFont systemFontOfSize:13];
         _toGWTextView.clipsToBounds = YES;

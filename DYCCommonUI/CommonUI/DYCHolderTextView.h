@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 typedef void(^textOfViewBlock)(NSString *text);
-@interface DYCTextView : UITextView<UITextViewDelegate>
+@interface DYCHolderTextView : UITextView<UITextViewDelegate>
 @property (nonatomic,strong) NSString *placeHolder;
 @property (nonatomic,copy) textOfViewBlock textBlock;
 @end

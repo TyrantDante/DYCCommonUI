@@ -6,9 +6,9 @@
 //  Copyright © 2016年 暴君. All rights reserved.
 //
 
-#import "DYCTextView.h"
+#import "DYCHolderTextView.h"
 
-@implementation DYCTextView
+@implementation DYCHolderTextView
 
 - (void)layoutSubviews{
     [super layoutSubviews];
