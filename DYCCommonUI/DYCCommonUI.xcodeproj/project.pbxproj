@@ -27,6 +27,7 @@
 		89D9EDED1C80490E001AAE27 /* DYCLitteEvaHeartView.m in Sources */ = {isa = PBXBuildFile; fileRef = 89D9EDEC1C80490E001AAE27 /* DYCLitteEvaHeartView.m */; };
 		FE6439CC1C84105C00E82510 /* DYCTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = FE6439CB1C84105C00E82510 /* DYCTextView.m */; };
 		FE6439CF1C841B9F00E82510 /* DYCEvaluationPopUp.m in Sources */ = {isa = PBXBuildFile; fileRef = FE6439CE1C841B9F00E82510 /* DYCEvaluationPopUp.m */; };
+		FE6439D21C8446F300E82510 /* UIScrollView+DYC.m in Sources */ = {isa = PBXBuildFile; fileRef = FE6439D11C8446F300E82510 /* UIScrollView+DYC.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -79,6 +80,8 @@
 		FE6439CB1C84105C00E82510 /* DYCTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DYCTextView.m; sourceTree = "<group>"; };
 		FE6439CD1C841B9F00E82510 /* DYCEvaluationPopUp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DYCEvaluationPopUp.h; sourceTree = "<group>"; };
 		FE6439CE1C841B9F00E82510 /* DYCEvaluationPopUp.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DYCEvaluationPopUp.m; sourceTree = "<group>"; };
+		FE6439D01C8446F300E82510 /* UIScrollView+DYC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIScrollView+DYC.h"; sourceTree = "<group>"; };
+		FE6439D11C8446F300E82510 /* UIScrollView+DYC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView+DYC.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -180,6 +183,8 @@
 				FE6439CB1C84105C00E82510 /* DYCTextView.m */,
 				FE6439CD1C841B9F00E82510 /* DYCEvaluationPopUp.h */,
 				FE6439CE1C841B9F00E82510 /* DYCEvaluationPopUp.m */,
+				FE6439D01C8446F300E82510 /* UIScrollView+DYC.h */,
+				FE6439D11C8446F300E82510 /* UIScrollView+DYC.m */,
 			);
 			path = CommonUI;
 			sourceTree = "<group>";
@@ -339,6 +344,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FE6439D21C8446F300E82510 /* UIScrollView+DYC.m in Sources */,
 				FE6439CC1C84105C00E82510 /* DYCTextView.m in Sources */,
 				FE6439CF1C841B9F00E82510 /* DYCEvaluationPopUp.m in Sources */,
 				89D9EDD71C803C73001AAE27 /* DYCBigEvaHeartView.m in Sources */,
