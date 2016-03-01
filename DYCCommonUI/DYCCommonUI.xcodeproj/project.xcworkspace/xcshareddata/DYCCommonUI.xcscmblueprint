@@ -1,16 +1,20 @@
 {
-  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "A5DD208D4703B0250FDB41101B9137CFBBFE077C",
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "A5DD208D4703B0250FDB41101B9137CFBBFE077C+++55D98A0",
   "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
 
   },
   "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
-    "26CA016EDB27857E322C7E2352AE2DDD6000215C" : 0,
-    "A5DD208D4703B0250FDB41101B9137CFBBFE077C" : 0
+    "A5DD208D4703B0250FDB41101B9137CFBBFE077C+++76A6263" : 0,
+    "A5DD208D4703B0250FDB41101B9137CFBBFE077C+++55D98A0" : 0,
+    "26CA016EDB27857E322C7E2352AE2DDD6000215C+++4213E8D" : 0,
+    "A5DD208D4703B0250FDB41101B9137CFBBFE077C+++79BD7B9" : 0
   },
   "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "B482C247-7C2A-4176-B8A1-1BAB12BCC133",
   "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
-    "26CA016EDB27857E322C7E2352AE2DDD6000215C" : "..\/GIT\/UI",
-    "A5DD208D4703B0250FDB41101B9137CFBBFE077C" : ""
+    "A5DD208D4703B0250FDB41101B9137CFBBFE077C+++76A6263" : "",
+    "A5DD208D4703B0250FDB41101B9137CFBBFE077C+++55D98A0" : "DYCCommonUI\/",
+    "26CA016EDB27857E322C7E2352AE2DDD6000215C+++4213E8D" : "..\/GIT\/UI",
+    "A5DD208D4703B0250FDB41101B9137CFBBFE077C+++79BD7B9" : ""
   },
   "DVTSourceControlWorkspaceBlueprintNameKey" : "DYCCommonUI",
   "DVTSourceControlWorkspaceBlueprintVersion" : 204,
@@ -19,17 +23,22 @@
     {
       "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "git.3laoshi.com:3laoshi\/UI-Design.git",
       "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
-      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "26CA016EDB27857E322C7E2352AE2DDD6000215C"
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "26CA016EDB27857E322C7E2352AE2DDD6000215C+++4213E8D"
     },
     {
       "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/TyrantDante\/DYCCommonUI.git",
       "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
-      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "A5DD208D4703B0250FDB41101B9137CFBBFE077C"
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "A5DD208D4703B0250FDB41101B9137CFBBFE077C+++55D98A0"
     },
     {
       "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/TyrantDante\/DYCCommonUI.git",
       "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
-      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "A5DD208D4703B0250FDB41101B9137CFBBFE077C"
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "A5DD208D4703B0250FDB41101B9137CFBBFE077C+++76A6263"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/TyrantDante\/DYCCommonUI.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "A5DD208D4703B0250FDB41101B9137CFBBFE077C+++79BD7B9"
     }
   ]
 }

@@ -25,6 +25,8 @@ static const char DYCOLDSIZEKEY = '1';
 //        [self addObserver:self forKeyPath:@"contentSize" options:NSKeyValueObservingOptionNew context:nil];
         [self setOldSize:NSStringFromCGSize(self.header.frame.size)];
         [self reframeSubViews];
+//        CGAffineTransform transform = self.transform;
+//        self.transform = CGAffineTransformTranslate(transform,0, self.header.bounds.size.height);
     }
 }
 
@@ -64,23 +66,23 @@ static const char DYCOLDSIZEKEY = '1';
         }
         return;
     }
-    if ([keyPath isEqualToString:@"contentSize"]){
-        UIView *bgView = [self getBgView];
-        
-        CGRect newFrame = bgView.frame;
-        CGSize newContentSize = self.contentSize;
-        newContentSize.height += self.header.frame.size.height;
-        self.contentSize = newContentSize;
-        newFrame.size = newContentSize;
-        bgView.frame = newFrame;
-    }
+//    if ([keyPath isEqualToString:@"contentSize"]){
+//        UIView *bgView = [self getBgView];
+//        
+//        CGRect newFrame = bgView.frame;
+//        CGSize newContentSize = self.contentSize;
+//        newContentSize.height += self.header.frame.size.height;
+//        self.contentSize = newContentSize;
+//        newFrame.size = newContentSize;
+//        bgView.frame = newFrame;
+//    }
 }
 
-- (void)layoutSubviews{
-    [super layoutSubviews];
-    [self addObserver:self forKeyPath:@"contentSize" options:NSKeyValueObservingOptionNew context:nil];
+//- (void)layoutSubviews{
+//    [super layoutSubviews];
+//    [self addObserver:self forKeyPath:@"contentSize" options:NSKeyValueObservingOptionNew context:nil];
+//}
 
-}
 - (void)setContentFrame:(CGRect)frame{
     [self setContentSize:frame.size];
     CGRect newFrame = [self getBgView].frame;
@@ -98,9 +100,20 @@ static const char DYCOLDSIZEKEY = '1';
     }
 
     return bgView;
+//    return self;
 }
+
 - (void)addSubview:(UIView *)view{
+    if (self.header == nil) {
+        [super addSubview:view];
+        return;
+    }
+    NSArray *array = view.subviews;
     UIView *bgView = [self getBgView];
+    for (UIView *sview in array) {
+        [sview removeFromSuperview];
+        [bgView addSubview:sview];
+    }
     
     [bgView addSubview:view];
 }
