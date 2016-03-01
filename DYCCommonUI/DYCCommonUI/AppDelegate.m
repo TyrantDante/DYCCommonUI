@@ -20,7 +20,10 @@
     // Override point for customization after application launch.
     self.window.backgroundColor = [UIColor whiteColor];
     TestViewController *testVC = [[TestViewController alloc] init];
-    self.window.rootViewController = testVC;
+
+    UINavigationController *nvc = [[UINavigationController alloc] initWithRootViewController:testVC];
+    
+    self.window.rootViewController = nvc;
     [self.window makeKeyAndVisible];
     return YES;
 }

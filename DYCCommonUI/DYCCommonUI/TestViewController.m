@@ -18,12 +18,23 @@
 @implementation TestViewController
 - (void)viewDidLoad{
     [super viewDidLoad];
-    UIScrollView *sv = [[UIScrollView alloc] initWithFrame:self.view.bounds];
-    sv.contentSize = CGSizeMake(1000, 10000);
-    UIView *view = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 100, 110)];
+    self.navigationController.navigationBarHidden = NO;
+    self.navigationItem.title = @"12313";
+    UIView *view = [[UIView alloc] initWithFrame:CGRectMake(0, 0, self.view.bounds.size.width, 300)];
     view.backgroundColor = [UIColor yellowColor];
+    
+    
+    UIScrollView *sv = [[UIScrollView alloc] initWithFrame:self.view.bounds];
+    sv.contentSize = CGSizeMake(self.view.bounds.size.width, 1500);
+    [sv setContentFrame:CGRectMake(0, 0, self.view.bounds.size.width, 1500)];
+    
     sv.header = view;
     self.view = sv;
+    
+    UIButton *view2 = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, self.view.bounds.size.width, 50)];
+    [view2 addTarget:self action:@selector(buttonClicked) forControlEvents:UIControlEventTouchUpInside];
+    view2.backgroundColor = [UIColor blueColor];
+    [self.view addSubview:view2];
     
 //    DYCBigEvaHeartView *bigview = [[DYCBigEvaHeartView alloc] init];
 //    bigview.numOfItem = 10;
