@@ -28,7 +28,7 @@
     sv.contentSize = CGSizeMake(self.view.bounds.size.width, 1500);
     [sv setContentFrame:CGRectMake(0, 0, self.view.bounds.size.width, 1500)];
     
-    sv.header = view;
+    sv.dyc_header = view;
     self.view = sv;
     
     UIButton *view2 = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, self.view.bounds.size.width, 50)];
