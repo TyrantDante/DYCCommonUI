@@ -60,9 +60,9 @@
 //    label.frame  = CGRectMake(0, 400, 100, 100);
 //    [self.view addSubview:label];
 //    
-//    _popUpView = [[DYCEvaluationPopUp alloc] init];
-//    _popUpView.frame = CGRectMake(20, (self.view.frame.size.height - 495) / 2, self.view.frame.size.width - 40, 495);
-//    [_popUpView showInView:self.view];
+    _popUpView = [[DYCEvaluationPopUp alloc] init];
+    _popUpView.frame = CGRectMake(20, (self.view.frame.size.height - 495) / 2, self.view.frame.size.width - 40, 495);
+    [_popUpView showInView:self.view];
 //    UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
 //    [button addTarget:self action:@selector(buttonClicked) forControlEvents:UIControlEventTouchUpInside];
 //    button.frame = CGRectMake(0, 500, 100, 50);

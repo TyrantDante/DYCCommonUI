@@ -145,6 +145,7 @@
     
     UIButton *submitBtn = [self viewWithTag:1006];
     submitBtn.frame = CGRectMake(40, height - 64, width - 80, 44);
+    
 }
 
 - (void)submitBtnClicked:(UIButton *)sender{

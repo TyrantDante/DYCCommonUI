@@ -52,11 +52,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "DYCCommonUI/TestViewController.m"
-            timestampString = "478508554.542161"
+            timestampString = "478509199.682266"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "75"
-            endingLineNumber = "75"
+            startingLineNumber = "74"
+            endingLineNumber = "74"
             landmarkName = "-buttonClicked"
             landmarkType = "5">
          </BreakpointContent>
