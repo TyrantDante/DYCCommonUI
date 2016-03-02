@@ -179,9 +179,9 @@
 + (CGRect)frameForPopUp{
     CGRect rect = [UIScreen mainScreen].bounds;
     if (rect.size.height > 568) {
-        return CGRectMake(20, (rect.size.height - 550) / 2, rect.size.width - 40, 550);
+        return CGRectMake(20, (rect.size.height - 550) / 2 + 20, rect.size.width - 40, 550);
     }
-    return CGRectMake(20, (rect.size.height - 450) / 2, rect.size.width - 40, 450);
+    return CGRectMake(20, (rect.size.height - 450) / 2 + 20, rect.size.width - 40, 450);
 }
 - (void)submitBtnClicked:(UIButton *)sender{
     if ([_delegate respondsToSelector:@selector(popUp:toJSExp:toGWExp:toJSScore:toGWScore:)]) {
