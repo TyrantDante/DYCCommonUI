@@ -19,6 +19,7 @@
             UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
             [button setImage:_normalImage forState:UIControlStateNormal];
             [button setImage:_selectedImage forState:UIControlStateSelected];
+            button.imageView.contentMode = UIViewContentModeScaleAspectFit;
             button.tag = 100 + i;
             [button addTarget:self action:@selector(buttonClicked:) forControlEvents:UIControlEventTouchUpInside];
             [self addSubview:button];
@@ -58,6 +59,7 @@
             UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
             [button setImage:_normalImage forState:UIControlStateNormal];
             [button setImage:_selectedImage forState:UIControlStateSelected];
+            button.imageView.contentMode = UIViewContentModeScaleAspectFit;
             button.tag = 100 + i;
             [button addTarget:self action:@selector(buttonClicked:) forControlEvents:UIControlEventTouchUpInside];
             [self addSubview:button];

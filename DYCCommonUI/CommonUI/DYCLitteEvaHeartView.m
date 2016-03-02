@@ -26,7 +26,7 @@
         _curScore = curScore;
         for (NSInteger i = 0; i < totalScore; i ++) {
             UIImageView *imageView = [[UIImageView alloc] init];
-            imageView.contentMode = UIViewContentModeCenter;
+            imageView.contentMode = UIViewContentModeScaleAspectFit;
             imageView.tag = 100 + i;
             [self addSubview:imageView];
             if (i >= curScore) {
@@ -45,7 +45,7 @@
     CGSize itemSize = CGSizeMake(size.width / _totalScore, size.height);
     for (NSInteger i = 0; i < _totalScore; i ++) {
         UIImageView *imageView = [self viewWithTag:i + 100];
-        imageView.frame = CGRectMake(size.width - i * itemSize.width, 0, itemSize.width, itemSize.height);
+        imageView.frame = CGRectMake(size.width - (i + 1) * itemSize.width, 0, itemSize.width, itemSize.height);
     }
 }
 
