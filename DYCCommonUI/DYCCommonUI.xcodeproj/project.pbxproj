@@ -32,6 +32,19 @@
 		FE6439E21C86D84D00E82510 /* icon_comment_close.png in Resources */ = {isa = PBXBuildFile; fileRef = FE6439DF1C86D84D00E82510 /* icon_comment_close.png */; };
 		FE6439E31C86D84D00E82510 /* icon_comment_close@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FE6439E01C86D84D00E82510 /* icon_comment_close@2x.png */; };
 		FE6439E41C86D84D00E82510 /* icon_comment_close@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = FE6439E11C86D84D00E82510 /* icon_comment_close@3x.png */; };
+		FE6439E61C86EA1400E82510 /* libstdc++.6.0.9.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = FE6439E51C86EA1400E82510 /* libstdc++.6.0.9.tbd */; };
+		FE6439E81C86EA1C00E82510 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = FE6439E71C86EA1C00E82510 /* libz.tbd */; };
+		FE6439EA1C86EA2E00E82510 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE6439E91C86EA2E00E82510 /* Security.framework */; };
+		FE6439EC1C86EA3500E82510 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE6439EB1C86EA3500E82510 /* QuartzCore.framework */; };
+		FE6439EE1C86EA4000E82510 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE6439ED1C86EA4000E82510 /* SystemConfiguration.framework */; };
+		FE6439F01C86EA5000E82510 /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE6439EF1C86EA5000E82510 /* CoreTelephony.framework */; };
+		FE6439F21C86EA5A00E82510 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE6439F11C86EA5A00E82510 /* CoreLocation.framework */; };
+		FE6439F41C86EA6400E82510 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE6439F31C86EA6400E82510 /* WebKit.framework */; };
+		FE6439F61C86EA6B00E82510 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE6439F51C86EA6B00E82510 /* Foundation.framework */; };
+		FE6439F81C86EA7300E82510 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE6439F71C86EA7300E82510 /* CoreGraphics.framework */; };
+		FE643A1E1C86FFA900E82510 /* DYCClassSelectedView.m in Sources */ = {isa = PBXBuildFile; fileRef = FE643A1D1C86FFA900E82510 /* DYCClassSelectedView.m */; };
+		FE643A211C8701E900E82510 /* TouchImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = FE643A201C8701E900E82510 /* TouchImageView.m */; };
+		FE643A241C870A5100E82510 /* DYCWeekView.m in Sources */ = {isa = PBXBuildFile; fileRef = FE643A231C870A5100E82510 /* DYCWeekView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -91,6 +104,22 @@
 		FE6439DF1C86D84D00E82510 /* icon_comment_close.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_comment_close.png; sourceTree = "<group>"; };
 		FE6439E01C86D84D00E82510 /* icon_comment_close@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_comment_close@2x.png"; sourceTree = "<group>"; };
 		FE6439E11C86D84D00E82510 /* icon_comment_close@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_comment_close@3x.png"; sourceTree = "<group>"; };
+		FE6439E51C86EA1400E82510 /* libstdc++.6.0.9.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libstdc++.6.0.9.tbd"; path = "usr/lib/libstdc++.6.0.9.tbd"; sourceTree = SDKROOT; };
+		FE6439E71C86EA1C00E82510 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
+		FE6439E91C86EA2E00E82510 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		FE6439EB1C86EA3500E82510 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		FE6439ED1C86EA4000E82510 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		FE6439EF1C86EA5000E82510 /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
+		FE6439F11C86EA5A00E82510 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		FE6439F31C86EA6400E82510 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
+		FE6439F51C86EA6B00E82510 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		FE6439F71C86EA7300E82510 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		FE643A1C1C86FFA900E82510 /* DYCClassSelectedView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DYCClassSelectedView.h; sourceTree = "<group>"; };
+		FE643A1D1C86FFA900E82510 /* DYCClassSelectedView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DYCClassSelectedView.m; sourceTree = "<group>"; };
+		FE643A1F1C8701E900E82510 /* TouchImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TouchImageView.h; sourceTree = "<group>"; };
+		FE643A201C8701E900E82510 /* TouchImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TouchImageView.m; sourceTree = "<group>"; };
+		FE643A221C870A5100E82510 /* DYCWeekView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DYCWeekView.h; sourceTree = "<group>"; };
+		FE643A231C870A5100E82510 /* DYCWeekView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DYCWeekView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +127,16 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FE6439F81C86EA7300E82510 /* CoreGraphics.framework in Frameworks */,
+				FE6439F61C86EA6B00E82510 /* Foundation.framework in Frameworks */,
+				FE6439F41C86EA6400E82510 /* WebKit.framework in Frameworks */,
+				FE6439F21C86EA5A00E82510 /* CoreLocation.framework in Frameworks */,
+				FE6439F01C86EA5000E82510 /* CoreTelephony.framework in Frameworks */,
+				FE6439EE1C86EA4000E82510 /* SystemConfiguration.framework in Frameworks */,
+				FE6439EC1C86EA3500E82510 /* QuartzCore.framework in Frameworks */,
+				FE6439EA1C86EA2E00E82510 /* Security.framework in Frameworks */,
+				FE6439E81C86EA1C00E82510 /* libz.tbd in Frameworks */,
+				FE6439E61C86EA1400E82510 /* libstdc++.6.0.9.tbd in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -121,6 +160,16 @@
 		89D9ED981C80373D001AAE27 = {
 			isa = PBXGroup;
 			children = (
+				FE6439F71C86EA7300E82510 /* CoreGraphics.framework */,
+				FE6439F51C86EA6B00E82510 /* Foundation.framework */,
+				FE6439F31C86EA6400E82510 /* WebKit.framework */,
+				FE6439F11C86EA5A00E82510 /* CoreLocation.framework */,
+				FE6439EF1C86EA5000E82510 /* CoreTelephony.framework */,
+				FE6439ED1C86EA4000E82510 /* SystemConfiguration.framework */,
+				FE6439EB1C86EA3500E82510 /* QuartzCore.framework */,
+				FE6439E91C86EA2E00E82510 /* Security.framework */,
+				FE6439E71C86EA1C00E82510 /* libz.tbd */,
+				FE6439E51C86EA1400E82510 /* libstdc++.6.0.9.tbd */,
 				89D9EDD81C803D6C001AAE27 /* Resource */,
 				89D9EDD41C803BAE001AAE27 /* CommonUI */,
 				89D9EDA31C80373E001AAE27 /* DYCCommonUI */,
@@ -184,6 +233,7 @@
 		89D9EDD41C803BAE001AAE27 /* CommonUI */ = {
 			isa = PBXGroup;
 			children = (
+				FE643A1B1C86FFA900E82510 /* DYCClassSelect */,
 				89D9EDD51C803C73001AAE27 /* DYCBigEvaHeartView.h */,
 				89D9EDD61C803C73001AAE27 /* DYCBigEvaHeartView.m */,
 				89D9EDEB1C80490E001AAE27 /* DYCLitteEvaHeartView.h */,
@@ -217,6 +267,19 @@
 				89D9EDE11C803D94001AAE27 /* icon_heart@3x.png */,
 			);
 			path = Resource;
+			sourceTree = "<group>";
+		};
+		FE643A1B1C86FFA900E82510 /* DYCClassSelect */ = {
+			isa = PBXGroup;
+			children = (
+				FE643A1F1C8701E900E82510 /* TouchImageView.h */,
+				FE643A201C8701E900E82510 /* TouchImageView.m */,
+				FE643A1C1C86FFA900E82510 /* DYCClassSelectedView.h */,
+				FE643A1D1C86FFA900E82510 /* DYCClassSelectedView.m */,
+				FE643A221C870A5100E82510 /* DYCWeekView.h */,
+				FE643A231C870A5100E82510 /* DYCWeekView.m */,
+			);
+			path = DYCClassSelect;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -363,10 +426,13 @@
 			files = (
 				FE6439D21C8446F300E82510 /* UIScrollView+DYC.m in Sources */,
 				FE6439CC1C84105C00E82510 /* DYCHolderTextView.m in Sources */,
+				FE643A1E1C86FFA900E82510 /* DYCClassSelectedView.m in Sources */,
+				FE643A241C870A5100E82510 /* DYCWeekView.m in Sources */,
 				FE6439CF1C841B9F00E82510 /* DYCEvaluationPopUp.m in Sources */,
 				89D9EDD71C803C73001AAE27 /* DYCBigEvaHeartView.m in Sources */,
 				89D9EDD31C803757001AAE27 /* TestViewController.m in Sources */,
 				FE6439DE1C86908700E82510 /* UIView+DYC.m in Sources */,
+				FE643A211C8701E900E82510 /* TouchImageView.m in Sources */,
 				89D9EDA91C80373E001AAE27 /* AppDelegate.m in Sources */,
 				89D9EDA61C80373E001AAE27 /* main.m in Sources */,
 				89D9EDED1C80490E001AAE27 /* DYCLitteEvaHeartView.m in Sources */,
@@ -501,6 +567,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = DYCCommonUI/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.naXing.DYCCommonUI;
@@ -513,6 +583,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = DYCCommonUI/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.naXing.DYCCommonUI;

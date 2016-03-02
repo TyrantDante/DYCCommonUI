@@ -22,9 +22,11 @@ static const char DYCOLDSIZEKEY = '1';
                                  dyc_header, OBJC_ASSOCIATION_ASSIGN);
         [self didChangeValueForKey:@"dyc_header"]; // KVO
         [self addObserver:self forKeyPath:@"contentOffset" options:NSKeyValueObservingOptionNew context:nil];
-//        [self addObserver:self forKeyPath:@"contentSize" options:NSKeyValueObservingOptionNew context:nil];
+        [self addObserver:self forKeyPath:@"subviews" options:NSKeyValueObservingOptionNew context:nil];
+        [self addObserver:self forKeyPath:@"contentSize" options:NSKeyValueObservingOptionNew context:nil];
         [self setOldSize:NSStringFromCGSize(self.dyc_header.frame.size)];
         [self reframeSubViews];
+
 //        CGAffineTransform transform = self.transform;
 //        self.transform = CGAffineTransformTranslate(transform,0, self.header.bounds.size.height);
     }
@@ -47,6 +49,8 @@ static const char DYCOLDSIZEKEY = '1';
         if (object == self) {
             UINavigationController *currentVC = [self getCurrentVC];
             CGPoint point = self.contentOffset;
+            NSLog(@"%f",CGSizeFromString(self.oldSize).height);
+            point.y += CGSizeFromString(self.oldSize).height;
             CGSize oldSize = CGSizeFromString(self.oldSize);
             CGFloat deltaY = - point.y + oldSize.height;
             CGFloat delta = deltaY / oldSize.height;
@@ -55,27 +59,26 @@ static const char DYCOLDSIZEKEY = '1';
             if ((oldSize.width - deltaX) <= 0) {
                 newFrame.origin.x = (oldSize.width - deltaX)/2.0;
                 newFrame.size = CGSizeMake(deltaX, deltaY);
-                newFrame.origin.y = point.y;
+                newFrame.origin.y = point.y - CGSizeFromString(self.oldSize).height;
                 currentVC.navigationBar.alpha = 0;
             }else{
                 currentVC.navigationBar.alpha = (oldSize.height - deltaX + 64)/oldSize.height;
             }
             self.dyc_header.frame = newFrame;
-            //        NSLog(@"frame (%f,%f,%f,%f)",newFrame.origin.x,newFrame.origin.y,deltaX,deltaY);
+            NSLog(@"frame (%f,%f,%f,%f)",newFrame.origin.x,newFrame.origin.y,deltaX,deltaY);
             
         }
         return;
     }
-//    if ([keyPath isEqualToString:@"contentSize"]){
-//        UIView *bgView = [self getBgView];
-//        
-//        CGRect newFrame = bgView.frame;
-//        CGSize newContentSize = self.contentSize;
-//        newContentSize.height += self.dyc_header.frame.size.height;
-//        self.contentSize = newContentSize;
-//        newFrame.size = newContentSize;
-//        bgView.frame = newFrame;
-//    }
+    if ([keyPath isEqualToString:@"subviews"]) {
+        for (UIView *view in self.subviews) {
+            if (view != self.dyc_header) {
+                CGRect frame = view.frame;
+                frame.origin.y = self.dyc_header.frame.size.height;
+                view.frame = frame;
+            }
+        }
+    }
 }
 
 //- (void)layoutSubviews{
@@ -83,49 +86,57 @@ static const char DYCOLDSIZEKEY = '1';
 //    [self addObserver:self forKeyPath:@"contentSize" options:NSKeyValueObservingOptionNew context:nil];
 //}
 
-- (void)setContentFrame:(CGRect)frame{
-    [self setContentSize:frame.size];
-    CGRect newFrame = [self getBgView].frame;
-    newFrame.size = frame.size;
-    [self getBgView].frame = newFrame;
-}
+//- (void)setContentFrame:(CGRect)frame{
+//    [self setContentSize:frame.size];
+//    CGRect newFrame = [self getBgView].frame;
+//    newFrame.size = frame.size;
+//    [self getBgView].frame = newFrame;
+//}
+//
+//- (UIView *)getBgView{
+//    UIView *bgView = [self viewWithTag:99999];
+//    if (!bgView) {
+//        bgView = [[UIView alloc] init];
+//        bgView.tag = 99999;
+//        [super addSubview:bgView];
+//    }
+//
+//    return bgView;
+////    return self;
+//}
 
-- (UIView *)getBgView{
-    UIView *bgView = [self viewWithTag:99999];
-    if (!bgView) {
-        bgView = [[UIView alloc] init];
-        bgView.tag = 99999;
-        bgView.backgroundColor = [UIColor blackColor];
-        [super addSubview:bgView];
-    }
+//- (void)addSubview:(UIView *)view{
+//    if (self.dyc_header == nil) {
+//        [super addSubview:view];
+//        return;
+//    }
+//    NSArray *array = self.subviews;
+//    UIView *bgView = [self getBgView];
+//    for (UIView *sview in array) {
+//        if (sview != bgView) {
+//            [sview removeFromSuperview];
+//            [bgView addSubview:sview];
+//        }
+//    }
+//    
+//    [bgView addSubview:view];
+//}
 
-    return bgView;
-//    return self;
-}
-
-- (void)addSubview:(UIView *)view{
-    if (self.dyc_header == nil) {
-        [super addSubview:view];
-        return;
-    }
-    NSArray *array = view.subviews;
-    UIView *bgView = [self getBgView];
-    for (UIView *sview in array) {
-        [sview removeFromSuperview];
-        [bgView addSubview:sview];
-    }
-    
-    [bgView addSubview:view];
-}
 - (void)reframeSubViews{
     for (UIView *view in self.dyc_header.subviews) {
         view.autoresizingMask = UIViewAutoresizingFlexibleWidth|UIViewAutoresizingFlexibleTopMargin;
     }
-    UIView *bgView = [self getBgView];
-    CGRect newFrame = bgView.frame;
-    newFrame.origin.y = self.dyc_header.frame.size.height;
-    bgView.frame = newFrame;
-    NSLog(@"%f",newFrame.origin.y);
+    self.contentInset = UIEdgeInsetsMake(+self.dyc_header.frame.size.height, 0, 0, 0);
+    self.dyc_header.frame = CGRectMake(0, - self.dyc_header.frame.size.height, self.dyc_header.frame.size.width, self.dyc_header.frame.size.height);
+    UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
+    button.frame = CGRectMake(20, 20, 40, 40);
+    [button setImage:[UIImage imageNamed:@"icon_comment_heart_empty"] forState:UIControlStateNormal];
+    [[self getCurrentVC].view addSubview:button];
+//    UIView *bgView = [self getBgView];
+//    CGRect newFrame = bgView.frame;
+//    newFrame.origin.y = self.dyc_header.frame.size.height;
+//    bgView.frame = newFrame;
+//    NSLog(@"%f",newFrame.origin.y);
 }
 
 - (UINavigationController *)getCurrentVC
@@ -151,8 +162,11 @@ static const char DYCOLDSIZEKEY = '1';
     
     if ([nextResponder isKindOfClass:[UINavigationController class]])
         result = nextResponder;
-    else
-        result = window.rootViewController;
+    else if ([nextResponder isKindOfClass:[UITabBarController class]])
+        result = ((UITabBarController *)nextResponder).selectedViewController;
+    else{
+        result = (UINavigationController *)(window.rootViewController);
+    }
     
     return result;
 }

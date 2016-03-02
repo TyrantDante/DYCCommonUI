@@ -11,5 +11,4 @@
 @interface UIScrollView (DYC)
 @property (nonatomic,strong) UIView *dyc_header;
 @property (nonatomic,strong) NSString *oldSize;
-- (void)setContentFrame:(CGRect)frame;
 @end
