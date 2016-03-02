@@ -21,7 +21,7 @@ static const char DYCOLDSIZEKEY = '1';
         objc_setAssociatedObject(self, &DYCHeaderKey,
                                  dyc_header, OBJC_ASSOCIATION_ASSIGN);
         [self didChangeValueForKey:@"dyc_header"]; // KVO
-        [self addObserver:self forKeyPath:@"contentOffset1" options:NSKeyValueObservingOptionNew context:nil];
+        [self addObserver:self forKeyPath:@"contentOffset" options:NSKeyValueObservingOptionNew context:nil];
 //        [self addObserver:self forKeyPath:@"contentSize" options:NSKeyValueObservingOptionNew context:nil];
         [self setOldSize:NSStringFromCGSize(self.dyc_header.frame.size)];
         [self reframeSubViews];
@@ -43,7 +43,7 @@ static const char DYCOLDSIZEKEY = '1';
     return objc_getAssociatedObject(self, &DYCHeaderKey);
 }
 - (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary<NSString *,id> *)change context:(void *)context{
-    if ([keyPath isEqualToString:@"contentOffset1"]) {
+    if ([keyPath isEqualToString:@"contentOffset"]) {
         if (object == self) {
             UINavigationController *currentVC = [self getCurrentVC];
             CGPoint point = self.contentOffset;

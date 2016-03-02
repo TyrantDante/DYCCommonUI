@@ -18,24 +18,22 @@
 @implementation TestViewController
 - (void)viewDidLoad{
     [super viewDidLoad];
-    self.navigationController.navigationBarHidden = NO;
+    self.navigationController.navigationBarHidden = YES;
     self.navigationItem.title = @"12313";
     UIView *view = [[UIView alloc] initWithFrame:CGRectMake(0, 0, self.view.bounds.size.width, 300)];
     view.backgroundColor = [UIColor yellowColor];
     
-    
+//
     UIScrollView *sv = [[UIScrollView alloc] initWithFrame:self.view.bounds];
     sv.contentSize = CGSizeMake(self.view.bounds.size.width, 1500);
     [sv setContentFrame:CGRectMake(0, 0, self.view.bounds.size.width, 1500)];
     
     sv.dyc_header = view;
     self.view = sv;
-    
-    UIButton *view2 = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, self.view.bounds.size.width, 50)];
+    UIButton *view2 = [[UIButton alloc] initWithFrame:CGRectMake(0, 64, self.view.bounds.size.width, 50)];
     [view2 addTarget:self action:@selector(buttonClicked) forControlEvents:UIControlEventTouchUpInside];
     view2.backgroundColor = [UIColor blueColor];
     [self.view addSubview:view2];
-    
 //    DYCBigEvaHeartView *bigview = [[DYCBigEvaHeartView alloc] init];
 //    bigview.numOfItem = 10;
 //    [self.view addSubview:bigview];
@@ -61,7 +59,7 @@
 //    [self.view addSubview:label];
 //    
     _popUpView = [[DYCEvaluationPopUp alloc] init];
-    _popUpView.frame = CGRectMake(20, (self.view.frame.size.height - 495) / 2, self.view.frame.size.width - 40, 495);
+    _popUpView.frame = CGRectMake(20, (self.view.frame.size.height - 550) / 2, self.view.frame.size.width - 40, 550);
     [_popUpView showInView:self.view];
 //    UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
 //    [button addTarget:self action:@selector(buttonClicked) forControlEvents:UIControlEventTouchUpInside];

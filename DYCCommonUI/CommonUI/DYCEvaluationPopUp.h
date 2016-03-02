@@ -9,9 +9,11 @@
 #import <UIKit/UIKit.h>
 @class DYCEvaluationPopUp;
 @protocol DYCEvaluationPopUpDelegate<NSObject>
+- (void)shoudClosePopView;
 - (void)popUp:(DYCEvaluationPopUp *)popUp toJSExp:(NSString *)tojsExp toGWExp:(NSString *)togwExp toJSScore:(NSInteger)jsScore toGWScore:(NSInteger)gwScore;
 @end
 @interface DYCEvaluationPopUp : UIView
 @property (nonatomic,assign) id<DYCEvaluationPopUpDelegate> delegate;
 - (void)showInView:(UIView *)view;
+- (void)hide;
 @end

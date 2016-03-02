@@ -31,6 +31,7 @@
 		FE6439D91C85792D00E82510 /* icon_comment_close.png in Resources */ = {isa = PBXBuildFile; fileRef = FE6439D61C85792D00E82510 /* icon_comment_close.png */; };
 		FE6439DA1C85792D00E82510 /* icon_comment_close@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FE6439D71C85792D00E82510 /* icon_comment_close@2x.png */; };
 		FE6439DB1C85792D00E82510 /* icon_comment_close@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = FE6439D81C85792D00E82510 /* icon_comment_close@3x.png */; };
+		FE6439DE1C86908700E82510 /* UIView+DYC.m in Sources */ = {isa = PBXBuildFile; fileRef = FE6439DD1C86908700E82510 /* UIView+DYC.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -88,6 +89,8 @@
 		FE6439D61C85792D00E82510 /* icon_comment_close.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icon_comment_close.png; path = "../../../../GIT/UI/2016.2.23-2016.2.25更新/家长端/切图/iOS/icon_comment_close.png"; sourceTree = "<group>"; };
 		FE6439D71C85792D00E82510 /* icon_comment_close@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "icon_comment_close@2x.png"; path = "../../../../GIT/UI/2016.2.23-2016.2.25更新/家长端/切图/iOS/icon_comment_close@2x.png"; sourceTree = "<group>"; };
 		FE6439D81C85792D00E82510 /* icon_comment_close@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "icon_comment_close@3x.png"; path = "../../../../GIT/UI/2016.2.23-2016.2.25更新/家长端/切图/iOS/icon_comment_close@3x.png"; sourceTree = "<group>"; };
+		FE6439DC1C86908700E82510 /* UIView+DYC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+DYC.h"; sourceTree = "<group>"; };
+		FE6439DD1C86908700E82510 /* UIView+DYC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+DYC.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -191,6 +194,8 @@
 				FE6439CE1C841B9F00E82510 /* DYCEvaluationPopUp.m */,
 				FE6439D01C8446F300E82510 /* UIScrollView+DYC.h */,
 				FE6439D11C8446F300E82510 /* UIScrollView+DYC.m */,
+				FE6439DC1C86908700E82510 /* UIView+DYC.h */,
+				FE6439DD1C86908700E82510 /* UIView+DYC.m */,
 			);
 			path = CommonUI;
 			sourceTree = "<group>";
@@ -361,6 +366,7 @@
 				FE6439CF1C841B9F00E82510 /* DYCEvaluationPopUp.m in Sources */,
 				89D9EDD71C803C73001AAE27 /* DYCBigEvaHeartView.m in Sources */,
 				89D9EDD31C803757001AAE27 /* TestViewController.m in Sources */,
+				FE6439DE1C86908700E82510 /* UIView+DYC.m in Sources */,
 				89D9EDA91C80373E001AAE27 /* AppDelegate.m in Sources */,
 				89D9EDA61C80373E001AAE27 /* main.m in Sources */,
 				89D9EDED1C80490E001AAE27 /* DYCLitteEvaHeartView.m in Sources */,

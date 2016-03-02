@@ -10,5 +10,6 @@
 typedef void(^textOfViewBlock)(NSString *text);
 @interface DYCHolderTextView : UITextView<UITextViewDelegate>
 @property (nonatomic,strong) NSString *placeHolder;
+@property (nonatomic,assign) NSInteger maxLength;
 @property (nonatomic,copy) textOfViewBlock textBlock;
 @end

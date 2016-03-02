@@ -9,6 +9,7 @@
 #import "DYCEvaluationPopUp.h"
 #import "DYCHolderTextView.h"
 #import "DYCBigEvaHeartView.h"
+#import "UIView+DYC.h"
 #define TITLE_FONT      [UIFont systemFontOfSize:16]
 #define SUB_FONT        [UIFont systemFontOfSize:13]
 #define TITLE_COLOR     [UIColor colorWithRed:0x36/255.0 green:0x36/255.0 blue:0x36/255.0 alpha:1]
@@ -30,16 +31,23 @@
 - (instancetype)init{
     self = [super init];
     if (self) {
-        self.backgroundColor = [UIColor whiteColor];
-        self.layer.cornerRadius = 5;
-        self.clipsToBounds = YES;
+        self.backgroundColor = [UIColor clearColor];
+        
+        
+        UIView *bgView = [[UIView alloc] init];
+        bgView.backgroundColor = [UIColor whiteColor];
+        bgView.tag = 1008;
+        bgView.layer.cornerRadius = 5;
+        bgView.clipsToBounds = YES;
+        
+        [self addSubview:bgView];
         
         _toJSEvaView = [[DYCBigEvaHeartView alloc] init];
         _toJSEvaView.numOfItem = 5;
         _toJSEvaView.scoreBlock = ^(NSInteger score){
             _toJSScore = score;
         };
-        [self addSubview:_toJSEvaView];
+        [bgView addSubview:_toJSEvaView];
         
         _toJSTextView = [[DYCHolderTextView alloc] init];
         _toJSTextView.placeHolder = @"你想说的话……";
@@ -51,14 +59,14 @@
         _toJSTextView.textBlock = ^(NSString *text){
             _toJSExp = text;
         };
-        [self addSubview:_toJSTextView];
+        [bgView addSubview:_toJSTextView];
         
         _toGWEvaView = [[DYCBigEvaHeartView alloc] init];
         _toGWEvaView.numOfItem = 5;
         _toGWEvaView.scoreBlock = ^(NSInteger score){
             _toGWScore = score;
         };
-        [self addSubview:_toGWEvaView];
+        [bgView addSubview:_toGWEvaView];
         
         _toGWTextView = [[DYCHolderTextView alloc] init];
         _toGWTextView.placeHolder = @"你想说的话……";
@@ -70,29 +78,29 @@
         _toGWTextView.textBlock = ^(NSString *text){
             _toGWExp = text;
         };
-        [self addSubview:_toGWTextView];
+        [bgView addSubview:_toGWTextView];
         
         UILabel *titleLabel = [DYCEvaluationPopUp labelWithFont:TITLE_FONT text:@"您的评价，让我们做的更好" textColor:TITLE_COLOR];
         titleLabel.tag = 10001;
-        [self addSubview:titleLabel];
+        [bgView addSubview:titleLabel];
         
         UIImageView *line = [[UIImageView alloc] init];
         line.tag = 1004;
         line.backgroundColor = SUB_LINECOLOR;
-        [self addSubview:line];
+        [bgView addSubview:line];
         
         UILabel *subJSLabel = [DYCEvaluationPopUp labelWithFont:SUB_FONT text:@"对老师" textColor:SUB_COLOR];
         subJSLabel.tag = 1002;
-        [self addSubview:subJSLabel];
+        [bgView addSubview:subJSLabel];
         
         UIImageView *line1 = [[UIImageView alloc] init];
         line1.tag = 1005;
         line1.backgroundColor = SUB_LINECOLOR;
-        [self addSubview:line1];
+        [bgView addSubview:line1];
         
         UILabel *subGWLabel = [DYCEvaluationPopUp labelWithFont:SUB_FONT text:@"对顾问" textColor:SUB_COLOR];
         subGWLabel.tag = 1003;
-        [self addSubview:subGWLabel];
+        [bgView addSubview:subGWLabel];
         
         UIButton *submitBtn = [UIButton buttonWithType:UIButtonTypeCustom];
         [submitBtn addTarget:self action:@selector(submitBtnClicked:) forControlEvents:UIControlEventTouchUpInside];
@@ -101,7 +109,13 @@
         submitBtn.clipsToBounds = YES;
         [submitBtn setTitle:@"提交评价" forState:UIControlStateNormal];
         submitBtn.tag = 1006;
-        [self addSubview:submitBtn];
+        [bgView addSubview:submitBtn];
+        
+        UIButton *closeBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+        [closeBtn addTarget:self action:@selector(closeBtnClicked:) forControlEvents:UIControlEventTouchUpInside];
+        [closeBtn setImage:[UIImage imageNamed:@"icon_comment_close"] forState:UIControlStateNormal];
+        closeBtn.tag = 1007;
+        [self addSubview:closeBtn];
     }
     return self;
 }
@@ -119,35 +133,57 @@
 
 - (void)layoutSubviews{
     [super layoutSubviews];
-    CGFloat width = self.frame.size.width;
-    CGFloat height = self.frame.size.height;
     
+    
+    UIView *bgView = [self viewWithTag:1008];
+    CGRect newFrame = self.bounds;
+    newFrame.origin.y += 40;
+    newFrame.size.height -= 40;
+    bgView.frame = newFrame;
+    
+    CGFloat width = bgView.frame.size.width;
+    CGFloat screenH = [UIScreen mainScreen].bounds.size.height;
+    CGFloat deltaH = 15;
+
+    if (screenH > 568) {
+        deltaH = 25;
+    }
     UILabel *titleLabel = [self viewWithTag:10001];
-    titleLabel.frame = CGRectMake(0, 25, self.frame.size.width, 16);
+    titleLabel.frame = CGRectMake(0, deltaH, width, 16);
     
     UILabel *subJSLabel = [self viewWithTag:1002];
-    subJSLabel.frame = CGRectMake(139, 66, width - 139 *2, 14);
+    subJSLabel.frame = CGRectMake(100, titleLabel.totalHeight + deltaH, width - 100 *2, 14);
 
     UIImageView *line = [self viewWithTag:1004];
-    line.frame = CGRectMake(0, 74, width, 1);
+    line.frame = CGRectMake(0, titleLabel.totalHeight + deltaH + 7, width, 1);
     
-    _toJSEvaView.frame = CGRectMake((width - 200) / 2.0, 100, 200, 25);
-    _toJSTextView.frame = CGRectMake(40, 150, width - 80, 78);
+    _toJSEvaView.frame = CGRectMake((width - 200) / 2.0, line.totalHeight + deltaH, 200, 25);
+    _toJSTextView.frame = CGRectMake(40, _toJSEvaView.totalHeight + deltaH, width - 80, 78);
     
     UILabel *subGWLabel = [self viewWithTag:1003];
-    subGWLabel.frame = CGRectMake(139, 246, width - 139 * 2, 14);
+    subGWLabel.frame = CGRectMake(100, _toJSTextView.totalHeight + deltaH, width - 100 * 2, 14);
     
     UIImageView *line1 = [self viewWithTag:1005];
-    line1.frame = CGRectMake(0, 253, width, 1);
+    line1.frame = CGRectMake(0, _toJSTextView.totalHeight + deltaH + 7, width, 1);
     
-    _toGWEvaView.frame = CGRectMake((width - 200)/2.0, 283, 200, 25);
-    _toGWTextView.frame = CGRectMake(40, 333, width - 80, 78);
+    _toGWEvaView.frame = CGRectMake((width - 200)/2.0, line1.totalHeight + deltaH, 200, 25);
+    _toGWTextView.frame = CGRectMake(40, _toGWEvaView.totalHeight + deltaH, width - 80, 78);
     
     UIButton *submitBtn = [self viewWithTag:1006];
-    submitBtn.frame = CGRectMake(40, height - 64, width - 80, 44);
+    submitBtn.frame = CGRectMake(40, _toGWTextView.totalHeight + deltaH, width - 80, 44);
     
+    CGFloat height = _toGWTextView.totalHeight + deltaH;
+    UIButton *closeBtn = [self viewWithTag:1007];
+    closeBtn.frame = CGRectMake(newFrame.size.width - 50, 0, 29, 49);
 }
 
++ (CGRect)frameForPopUp{
+    CGRect rect = [UIScreen mainScreen].bounds;
+    if (rect.size.height > 568) {
+        return CGRectMake(20, (rect.size.height - 550) / 2, rect.size.width - 40, 550);
+    }
+    return CGRectMake(20, (rect.size.height - 450) / 2, rect.size.width - 40, 450);
+}
 - (void)submitBtnClicked:(UIButton *)sender{
     if ([_delegate respondsToSelector:@selector(popUp:toJSExp:toGWExp:toJSScore:toGWScore:)]) {
         [_delegate popUp:self toJSExp:_toJSExp toGWExp:_toGWExp toJSScore:_toJSScore toGWScore:_toGWScore];
@@ -165,7 +201,6 @@
         bgView.backgroundColor = [UIColor colorWithRed:0 green:0 blue:0 alpha:0.4];
         self.frame = frame;
     }];
-    
 }
 
 - (void)hide{
@@ -177,5 +212,11 @@
     [self.superview removeFromSuperview];
     [self removeFromSuperview];
     self.frame = frame;
+}
+
+- (void)closeBtnClicked:(id)sender{
+    if ([_delegate respondsToSelector:@selector(shoudClosePopView)]) {
+        [_delegate shoudClosePopView];
+    }
 }
 @end
