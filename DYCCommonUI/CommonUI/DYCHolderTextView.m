@@ -33,18 +33,18 @@
 }
 
 - (UILabel *)placeHolderLabel{
-    UILabel *placeLabel = [self viewWithTag:1001];
+    UILabel *placeLabel = [self viewWithTag:99991];
     if (!placeLabel) {
         placeLabel = [[UILabel alloc] init];
         [self addSubview:placeLabel];
         placeLabel.enabled = NO;
-        placeLabel.tag = 1001;
+        placeLabel.tag = 99991;
         placeLabel.textColor = [UIColor colorWithRed:0xd8/255.0 green:0xd8/255.0 blue:0xd8/255.0 alpha:1];
     }
     return placeLabel;
 }
 - (BOOL)textViewShouldBeginEditing:(UITextView *)textView{
-    UILabel *placeLabel = [self viewWithTag:1001];
+    UILabel *placeLabel = [self viewWithTag:99991];
     placeLabel.hidden = YES;
     return YES;
 }
@@ -65,7 +65,7 @@
 
 - (void)textViewDidEndEditing:(UITextView *)textView{
     if (textView.text.length == 0) {
-        UILabel *placeLabel = [self viewWithTag:1001];
+        UILabel *placeLabel = [self viewWithTag:99991];
         placeLabel.hidden = NO;
     }
     
@@ -94,13 +94,13 @@
 }
 
 - (UILabel *)strLengthLabel{
-    UILabel *strLengthLabel = [self viewWithTag:1002];
+    UILabel *strLengthLabel = [self viewWithTag:99992];
     if (!strLengthLabel) {
         strLengthLabel = [[UILabel alloc] init];
         strLengthLabel.textAlignment = NSTextAlignmentRight;
         [self insertSubview:strLengthLabel atIndex:0];
         strLengthLabel.autoresizingMask = UIViewAutoresizingFlexibleTopMargin;
-        strLengthLabel.tag = 1002;
+        strLengthLabel.tag = 99992;
         strLengthLabel.textColor = [UIColor colorWithRed:0xd8/255.0 green:0xd8/255.0 blue:0xd8/255.0 alpha:1];
     }
     return strLengthLabel;

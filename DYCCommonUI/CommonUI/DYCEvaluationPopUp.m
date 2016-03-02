@@ -172,7 +172,6 @@
     UIButton *submitBtn = [self viewWithTag:1006];
     submitBtn.frame = CGRectMake(40, _toGWTextView.totalHeight + deltaH, width - 80, 44);
     
-    CGFloat height = _toGWTextView.totalHeight + deltaH;
     UIButton *closeBtn = [self viewWithTag:1007];
     closeBtn.frame = CGRectMake(newFrame.size.width - 50, 0, 29, 49);
 }

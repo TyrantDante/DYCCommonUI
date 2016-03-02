@@ -16,4 +16,5 @@
 @property (nonatomic,assign) id<DYCEvaluationPopUpDelegate> delegate;
 - (void)showInView:(UIView *)view;
 - (void)hide;
++ (CGRect)frameForPopUp;
 @end
