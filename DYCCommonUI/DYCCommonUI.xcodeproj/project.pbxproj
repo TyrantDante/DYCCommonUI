@@ -28,9 +28,6 @@
 		FE6439CC1C84105C00E82510 /* DYCHolderTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = FE6439CB1C84105C00E82510 /* DYCHolderTextView.m */; };
 		FE6439CF1C841B9F00E82510 /* DYCEvaluationPopUp.m in Sources */ = {isa = PBXBuildFile; fileRef = FE6439CE1C841B9F00E82510 /* DYCEvaluationPopUp.m */; };
 		FE6439D21C8446F300E82510 /* UIScrollView+DYC.m in Sources */ = {isa = PBXBuildFile; fileRef = FE6439D11C8446F300E82510 /* UIScrollView+DYC.m */; };
-		FE6439D91C85792D00E82510 /* icon_comment_close.png in Resources */ = {isa = PBXBuildFile; fileRef = FE6439D61C85792D00E82510 /* icon_comment_close.png */; };
-		FE6439DA1C85792D00E82510 /* icon_comment_close@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FE6439D71C85792D00E82510 /* icon_comment_close@2x.png */; };
-		FE6439DB1C85792D00E82510 /* icon_comment_close@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = FE6439D81C85792D00E82510 /* icon_comment_close@3x.png */; };
 		FE6439DE1C86908700E82510 /* UIView+DYC.m in Sources */ = {isa = PBXBuildFile; fileRef = FE6439DD1C86908700E82510 /* UIView+DYC.m */; };
 /* End PBXBuildFile section */
 
@@ -86,9 +83,6 @@
 		FE6439CE1C841B9F00E82510 /* DYCEvaluationPopUp.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DYCEvaluationPopUp.m; sourceTree = "<group>"; };
 		FE6439D01C8446F300E82510 /* UIScrollView+DYC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIScrollView+DYC.h"; sourceTree = "<group>"; };
 		FE6439D11C8446F300E82510 /* UIScrollView+DYC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView+DYC.m"; sourceTree = "<group>"; };
-		FE6439D61C85792D00E82510 /* icon_comment_close.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icon_comment_close.png; path = "../../../../GIT/UI/2016.2.23-2016.2.25更新/家长端/切图/iOS/icon_comment_close.png"; sourceTree = "<group>"; };
-		FE6439D71C85792D00E82510 /* icon_comment_close@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "icon_comment_close@2x.png"; path = "../../../../GIT/UI/2016.2.23-2016.2.25更新/家长端/切图/iOS/icon_comment_close@2x.png"; sourceTree = "<group>"; };
-		FE6439D81C85792D00E82510 /* icon_comment_close@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "icon_comment_close@3x.png"; path = "../../../../GIT/UI/2016.2.23-2016.2.25更新/家长端/切图/iOS/icon_comment_close@3x.png"; sourceTree = "<group>"; };
 		FE6439DC1C86908700E82510 /* UIView+DYC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+DYC.h"; sourceTree = "<group>"; };
 		FE6439DD1C86908700E82510 /* UIView+DYC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+DYC.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -203,9 +197,6 @@
 		89D9EDD81C803D6C001AAE27 /* Resource */ = {
 			isa = PBXGroup;
 			children = (
-				FE6439D61C85792D00E82510 /* icon_comment_close.png */,
-				FE6439D71C85792D00E82510 /* icon_comment_close@2x.png */,
-				FE6439D81C85792D00E82510 /* icon_comment_close@3x.png */,
 				89D9EDD91C803D94001AAE27 /* icon_comment_heart_empty.png */,
 				89D9EDDA1C803D94001AAE27 /* icon_comment_heart_empty@2x.png */,
 				89D9EDDB1C803D94001AAE27 /* icon_comment_heart_empty@3x.png */,
@@ -324,13 +315,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				89D9EDE31C803D94001AAE27 /* icon_comment_heart_empty@2x.png in Resources */,
-				FE6439DB1C85792D00E82510 /* icon_comment_close@3x.png in Resources */,
 				89D9EDE61C803D94001AAE27 /* icon_comment_heart@2x.png in Resources */,
-				FE6439DA1C85792D00E82510 /* icon_comment_close@2x.png in Resources */,
 				89D9EDEA1C803D94001AAE27 /* icon_heart@3x.png in Resources */,
 				89D9EDE81C803D94001AAE27 /* icon_heart.png in Resources */,
 				89D9EDE41C803D94001AAE27 /* icon_comment_heart_empty@3x.png in Resources */,
-				FE6439D91C85792D00E82510 /* icon_comment_close.png in Resources */,
 				89D9EDE21C803D94001AAE27 /* icon_comment_heart_empty.png in Resources */,
 				89D9EDAB1C80373E001AAE27 /* Assets.xcassets in Resources */,
 				89D9EDE91C803D94001AAE27 /* icon_heart@2x.png in Resources */,
