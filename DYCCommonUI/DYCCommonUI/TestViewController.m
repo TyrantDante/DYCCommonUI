@@ -18,7 +18,7 @@
 @implementation TestViewController
 - (void)viewDidLoad{
     [super viewDidLoad];
-    self.navigationController.navigationBarHidden = YES;
+    self.navigationController.navigationBarHidden = NO;
     self.navigationItem.title = @"12313";
 //    UIView *view = [[UIView alloc] initWithFrame:CGRectMake(0, 0, self.view.bounds.size.width, 300)];
 //    view.backgroundColor = [UIColor yellowColor];
