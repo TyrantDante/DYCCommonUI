@@ -16,8 +16,8 @@
     CGFloat height = self.font.lineHeight;
     CGFloat width = self.frame.size.width;
     placeLabel.frame = CGRectMake(7, 7, width, height);
-    UILabel *strLabel = [self strLengthLabel];
-    strLabel.frame = CGRectMake(self.frame.size.width - 100, self.frame.size.height - 8, 98, 8);
+//    UILabel *strLabel = [self strLengthLabel];
+//    strLabel.frame = CGRectMake(self.frame.size.width - 100, self.frame.size.height - 8, 98, 8);
 }
 
 - (void)setPlaceHolder:(NSString *)placeHolder{
@@ -102,17 +102,33 @@
         strLengthLabel.autoresizingMask = UIViewAutoresizingFlexibleTopMargin;
         strLengthLabel.tag = 1002;
         strLengthLabel.textColor = [UIColor colorWithRed:0xd8/255.0 green:0xd8/255.0 blue:0xd8/255.0 alpha:1];
-        [self addObserver:self forKeyPath:@"contentOffSet" options:NSKeyValueObservingOptionNew context:nil];
     }
     return strLengthLabel;
 }
-- (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary<NSString *,id> *)change context:(void *)context{
-    if ([keyPath isEqualToString:@"contentOffSet"]) {
-        CGPoint point = self.contentOffset;
-        UILabel *strLabel = [self strLengthLabel];
-        CGRect frame = strLabel.frame;
-        frame.size.height += point.y;
-        strLabel.frame = frame;
-    }
+
+- (void)setContentOffset:(CGPoint)contentOffset{
+    [super setContentOffset:contentOffset];
+//    UILabel *strLabel = [self strLengthLabel];
+//    
+//    CGRect frame = strLabel.frame;
+//    frame.origin.y = self.contentSize.height - 10;
+//    strLabel.frame = frame;
 }
+
+- (void)setContentSize:(CGSize)contentSize{
+    [super setContentSize:contentSize];
+    UILabel *strLabel = [self strLengthLabel];
+
+    CGRect frame = strLabel.frame;
+    if(contentSize.height < self.frame.size.height){
+        frame.origin.y = self.frame.size.height - 10;
+    } else {
+        frame.origin.y = self.contentSize.height - 10;
+    }
+    frame.origin.x = self.contentSize.width - 100;
+    frame.size.width = 98;
+    frame.size.height = 10;
+    strLabel.frame = frame;
+}
+
 @end
