@@ -12,6 +12,7 @@
 @implementation UIScrollView (DYC)
 static const char DYCHeaderKey = '\0';
 static const char DYCOLDSIZEKEY = '1';
+static const char DYCBUTTONKEY = '2';
 - (void)setDyc_header:(UIView *)dyc_header{
     if (self.dyc_header != dyc_header) {
         [self.dyc_header removeFromSuperview];
@@ -26,9 +27,9 @@ static const char DYCOLDSIZEKEY = '1';
         [self addObserver:self forKeyPath:@"contentSize" options:NSKeyValueObservingOptionNew context:nil];
         [self setOldSize:NSStringFromCGSize(self.dyc_header.frame.size)];
         [self reframeSubViews];
-
-//        CGAffineTransform transform = self.transform;
-//        self.transform = CGAffineTransformTranslate(transform,0, self.header.bounds.size.height);
+        
+        //        CGAffineTransform transform = self.transform;
+        //        self.transform = CGAffineTransformTranslate(transform,0, self.header.bounds.size.height);
     }
 }
 
@@ -43,6 +44,15 @@ static const char DYCOLDSIZEKEY = '1';
 }
 - (UIView *)dyc_header{
     return objc_getAssociatedObject(self, &DYCHeaderKey);
+}
+- (void)setButton:(UIButton *)button{
+    [self willChangeValueForKey:@"oldSize"]; // KVO
+    objc_setAssociatedObject(self, &DYCBUTTONKEY,
+                             button, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+    [self didChangeValueForKey:@"oldSize"];
+}
+- (UIButton *)button{
+    return objc_getAssociatedObject(self, &DYCBUTTONKEY);
 }
 - (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary<NSString *,id> *)change context:(void *)context{
     if ([keyPath isEqualToString:@"contentOffset"]) {
@@ -68,6 +78,7 @@ static const char DYCOLDSIZEKEY = '1';
             NSLog(@"frame (%f,%f,%f,%f)",newFrame.origin.x,newFrame.origin.y,deltaX,deltaY);
             
         }
+        [self.button.superview bringSubviewToFront:self.button];
         return;
     }
     if ([keyPath isEqualToString:@"subviews"]) {
@@ -118,7 +129,7 @@ static const char DYCOLDSIZEKEY = '1';
 //            [bgView addSubview:sview];
 //        }
 //    }
-//    
+//
 //    [bgView addSubview:view];
 //}
 
@@ -128,16 +139,19 @@ static const char DYCOLDSIZEKEY = '1';
     }
     self.contentInset = UIEdgeInsetsMake(+self.dyc_header.frame.size.height, 0, 0, 0);
     self.dyc_header.frame = CGRectMake(0, - self.dyc_header.frame.size.height, self.dyc_header.frame.size.width, self.dyc_header.frame.size.height);
-    UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
-    button.frame = CGRectMake(10, 20, 40, 44);
-    [button setImage:[UIImage imageNamed:@"icon_comment_close"] forState:UIControlStateNormal];
-    button.backgroundColor = [UIColor blackColor];
-    [[self getCurrentVC].view addSubview:button];
-//    UIView *bgView = [self getBgView];
-//    CGRect newFrame = bgView.frame;
-//    newFrame.origin.y = self.dyc_header.frame.size.height;
-//    bgView.frame = newFrame;
-//    NSLog(@"%f",newFrame.origin.y);
+    if (self.button == nil) {
+        self.button = [UIButton buttonWithType:UIButtonTypeCustom];
+        self.button.frame = CGRectMake(10, 20, 40, 44);
+        [self.button setImage:[UIImage imageNamed:@"navigationbar_icon_close_white_pressed"] forState:UIControlStateNormal];
+        self.button.backgroundColor = [UIColor clearColor];
+        [[self getCurrentVC].view addSubview:self.button];
+    }
+    
+    //    UIView *bgView = [self getBgView];
+    //    CGRect newFrame = bgView.frame;
+    //    newFrame.origin.y = self.dyc_header.frame.size.height;
+    //    bgView.frame = newFrame;
+    //    NSLog(@"%f",newFrame.origin.y);
 }
 
 - (UINavigationController *)getCurrentVC

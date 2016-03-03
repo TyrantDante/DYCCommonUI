@@ -11,4 +11,5 @@
 @interface UIScrollView (DYC)
 @property (nonatomic,strong) UIView *dyc_header;
 @property (nonatomic,strong) NSString *oldSize;
+@property (nonatomic,strong) UIButton *button;
 @end
