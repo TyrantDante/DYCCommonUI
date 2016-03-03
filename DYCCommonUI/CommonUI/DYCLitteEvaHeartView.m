@@ -54,6 +54,7 @@
             imageView.image = [UIImage imageNamed:HEART_IMAGE];
         }
     }
+    [self layoutSubviews];
 }
 - (void)layoutSubviews{
     [super layoutSubviews];
