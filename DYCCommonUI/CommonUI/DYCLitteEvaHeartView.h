@@ -15,5 +15,7 @@
 //default is head_empty.png
 @property (nonatomic,strong) UIImage *normalImage;
 
+@property (nonatomic,assign) NSInteger currentScore;
+
 - (instancetype)initWithTotalScroe:(NSInteger)totalScore curScore:(NSInteger)curScore;
 @end

@@ -24,8 +24,8 @@
 - (void)text2{
     self.navigationController.navigationBarHidden = NO;
     self.navigationItem.title = @"12313";
-    UIBarButtonItem *item = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"icon_comment_close"] style:UIBarButtonItemStyleDone target:self action:@selector(itemClicked:)];
-    self.navigationItem.leftBarButtonItem = item;
+//    UIBarButtonItem *item = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"icon_comment_close"] style:UIBarButtonItemStyleDone target:self action:@selector(itemClicked:)];
+//    self.navigationItem.leftBarButtonItem = item;
     UITableView *tableView = [[UITableView alloc] initWithFrame:self.view.bounds];
     tableView.delegate = self;
     tableView.dataSource = self;

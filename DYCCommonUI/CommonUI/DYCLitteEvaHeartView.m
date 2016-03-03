@@ -38,7 +38,23 @@
     }
     return self;
 }
-
+- (void)setCurrentScore:(NSInteger)currentScore{
+    _currentScore = currentScore;
+    for (UIView *view in self.subviews) {
+        [view removeFromSuperview];
+    }
+    for (NSInteger i = 0; i < _totalScore; i ++) {
+        UIImageView *imageView = [[UIImageView alloc] init];
+        imageView.contentMode = UIViewContentModeScaleAspectFit;
+        imageView.tag = 100 + i;
+        [self addSubview:imageView];
+        if (i >= currentScore) {
+            imageView.image = [UIImage imageNamed:HEART_EMPTY_IMAGE];
+        } else {
+            imageView.image = [UIImage imageNamed:HEART_IMAGE];
+        }
+    }
+}
 - (void)layoutSubviews{
     [super layoutSubviews];
     CGSize size = self.frame.size;
