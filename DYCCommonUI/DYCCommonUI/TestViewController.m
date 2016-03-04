@@ -19,7 +19,7 @@
 @implementation TestViewController
 - (void)viewDidLoad{
     [super viewDidLoad];
-    [self text];
+    [self text2];
 }
 - (void)text2{
     self.navigationController.navigationBarHidden = NO;
