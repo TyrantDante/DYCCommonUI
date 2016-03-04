@@ -142,7 +142,7 @@ static const char DYCBUTTONKEY = '2';
     if (self.button == nil) {
         self.button = [UIButton buttonWithType:UIButtonTypeCustom];
         self.button.frame = CGRectMake(10, 20, 40, 44);
-        [self.button setImage:[UIImage imageNamed:@"navigationbar_icon_close_white_pressed"] forState:UIControlStateNormal];
+        [self.button setImage:[UIImage imageNamed:@"navigationbar_icon_white_back_presseddyc"] forState:UIControlStateNormal];
         self.button.backgroundColor = [UIColor clearColor];
         [[self getCurrentVC].view addSubview:self.button];
     }

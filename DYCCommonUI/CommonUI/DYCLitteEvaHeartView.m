@@ -8,7 +8,7 @@
 
 #import "DYCLitteEvaHeartView.h"
 #define HEART_IMAGE @"icon_heart"
-#define HEART_EMPTY_IMAGE @""
+#define HEART_EMPTY_IMAGE @"heart_gray"
 @interface DYCLitteEvaHeartView()
 
 //default is 0
@@ -26,7 +26,7 @@
         _curScore = curScore;
         for (NSInteger i = 0; i < totalScore; i ++) {
             UIImageView *imageView = [[UIImageView alloc] init];
-            imageView.contentMode = UIViewContentModeScaleAspectFit;
+            imageView.contentMode = UIViewContentModeScaleAspectFill;
             imageView.tag = 100 + i;
             [self addSubview:imageView];
             if (i >= curScore) {
@@ -45,7 +45,7 @@
     }
     for (NSInteger i = 0; i < _totalScore; i ++) {
         UIImageView *imageView = [[UIImageView alloc] init];
-        imageView.contentMode = UIViewContentModeScaleAspectFit;
+        imageView.contentMode = UIViewContentModeScaleAspectFill;
         imageView.tag = 100 + i;
         [self addSubview:imageView];
         if (i >= currentScore) {
