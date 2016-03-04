@@ -62,7 +62,7 @@
     CGSize itemSize = CGSizeMake(size.width / _totalScore, size.height);
     for (NSInteger i = 0; i < _totalScore; i ++) {
         UIImageView *imageView = [self viewWithTag:i + 100];
-        imageView.frame = CGRectMake(i * itemSize.width, 0, itemSize.width, itemSize.height);
+        imageView.frame = CGRectMake(i * itemSize.width, 0, itemSize.width - 3, itemSize.height);
     }
 }
 
