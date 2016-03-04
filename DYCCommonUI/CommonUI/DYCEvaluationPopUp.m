@@ -187,7 +187,6 @@
     if ([_delegate respondsToSelector:@selector(popUp:toJSExp:toGWExp:toJSScore:toGWScore:)]) {
         [_delegate popUp:self toJSExp:_toJSExp toGWExp:_toGWExp toJSScore:_toJSScore toGWScore:_toGWScore];
     }
-    [self hide];
 }
 
 - (void)showInView:(UIView *)view{
