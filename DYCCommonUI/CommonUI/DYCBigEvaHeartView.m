@@ -41,7 +41,7 @@
 - (void)buttonClicked:(UIButton *)sender{
     NSInteger score = sender.tag - 100;
     if (_scoreBlock) {
-        _scoreBlock(score);
+        _scoreBlock(score + 1);
     }
     for (NSInteger i = 100; i <= sender.tag; i ++) {
         UIButton *button = [self viewWithTag:i];
