@@ -34,6 +34,10 @@
 		FE0895851C8992F8001B5E1E /* navigationbar_icon_white_backdyc.png in Resources */ = {isa = PBXBuildFile; fileRef = FE0895821C8992F8001B5E1E /* navigationbar_icon_white_backdyc.png */; };
 		FE0895861C8992F8001B5E1E /* navigationbar_icon_white_backdyc@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FE0895831C8992F8001B5E1E /* navigationbar_icon_white_backdyc@2x.png */; };
 		FE0895871C8992F8001B5E1E /* navigationbar_icon_white_backdyc@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = FE0895841C8992F8001B5E1E /* navigationbar_icon_white_backdyc@3x.png */; };
+		FE40E15A1C8D767A00718711 /* DYCNormalTeachTimeSetView.m in Sources */ = {isa = PBXBuildFile; fileRef = FE40E1591C8D767A00718711 /* DYCNormalTeachTimeSetView.m */; };
+		FE40E15D1C8D76E500718711 /* UIButton+DYC.m in Sources */ = {isa = PBXBuildFile; fileRef = FE40E15C1C8D76E500718711 /* UIButton+DYC.m */; };
+		FE40E1601C8D7B1700718711 /* DYCStringHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = FE40E15F1C8D7B1700718711 /* DYCStringHelper.m */; };
+		FE40E1661C8D9A3200718711 /* UIImage+DYC.m in Sources */ = {isa = PBXBuildFile; fileRef = FE40E1651C8D9A3200718711 /* UIImage+DYC.m */; };
 		FE6439CC1C84105C00E82510 /* DYCHolderTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = FE6439CB1C84105C00E82510 /* DYCHolderTextView.m */; };
 		FE6439CF1C841B9F00E82510 /* DYCEvaluationPopUp.m in Sources */ = {isa = PBXBuildFile; fileRef = FE6439CE1C841B9F00E82510 /* DYCEvaluationPopUp.m */; };
 		FE6439D21C8446F300E82510 /* UIScrollView+DYC.m in Sources */ = {isa = PBXBuildFile; fileRef = FE6439D11C8446F300E82510 /* UIScrollView+DYC.m */; };
@@ -111,6 +115,14 @@
 		FE0895821C8992F8001B5E1E /* navigationbar_icon_white_backdyc.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = navigationbar_icon_white_backdyc.png; sourceTree = "<group>"; };
 		FE0895831C8992F8001B5E1E /* navigationbar_icon_white_backdyc@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "navigationbar_icon_white_backdyc@2x.png"; sourceTree = "<group>"; };
 		FE0895841C8992F8001B5E1E /* navigationbar_icon_white_backdyc@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "navigationbar_icon_white_backdyc@3x.png"; sourceTree = "<group>"; };
+		FE40E1581C8D767A00718711 /* DYCNormalTeachTimeSetView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DYCNormalTeachTimeSetView.h; sourceTree = "<group>"; };
+		FE40E1591C8D767A00718711 /* DYCNormalTeachTimeSetView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DYCNormalTeachTimeSetView.m; sourceTree = "<group>"; };
+		FE40E15B1C8D76E500718711 /* UIButton+DYC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+DYC.h"; sourceTree = "<group>"; };
+		FE40E15C1C8D76E500718711 /* UIButton+DYC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+DYC.m"; sourceTree = "<group>"; };
+		FE40E15E1C8D7B1700718711 /* DYCStringHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DYCStringHelper.h; sourceTree = "<group>"; };
+		FE40E15F1C8D7B1700718711 /* DYCStringHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DYCStringHelper.m; sourceTree = "<group>"; };
+		FE40E1641C8D9A3200718711 /* UIImage+DYC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+DYC.h"; sourceTree = "<group>"; };
+		FE40E1651C8D9A3200718711 /* UIImage+DYC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+DYC.m"; sourceTree = "<group>"; };
 		FE6439CA1C84105C00E82510 /* DYCHolderTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DYCHolderTextView.h; sourceTree = "<group>"; };
 		FE6439CB1C84105C00E82510 /* DYCHolderTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DYCHolderTextView.m; sourceTree = "<group>"; };
 		FE6439CD1C841B9F00E82510 /* DYCEvaluationPopUp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DYCEvaluationPopUp.h; sourceTree = "<group>"; };
@@ -260,10 +272,16 @@
 				FE6439CB1C84105C00E82510 /* DYCHolderTextView.m */,
 				FE6439CD1C841B9F00E82510 /* DYCEvaluationPopUp.h */,
 				FE6439CE1C841B9F00E82510 /* DYCEvaluationPopUp.m */,
+				FE40E15B1C8D76E500718711 /* UIButton+DYC.h */,
+				FE40E15C1C8D76E500718711 /* UIButton+DYC.m */,
 				FE6439D01C8446F300E82510 /* UIScrollView+DYC.h */,
 				FE6439D11C8446F300E82510 /* UIScrollView+DYC.m */,
 				FE6439DC1C86908700E82510 /* UIView+DYC.h */,
 				FE6439DD1C86908700E82510 /* UIView+DYC.m */,
+				FE40E15E1C8D7B1700718711 /* DYCStringHelper.h */,
+				FE40E15F1C8D7B1700718711 /* DYCStringHelper.m */,
+				FE40E1641C8D9A3200718711 /* UIImage+DYC.h */,
+				FE40E1651C8D9A3200718711 /* UIImage+DYC.m */,
 			);
 			path = CommonUI;
 			sourceTree = "<group>";
@@ -305,6 +323,8 @@
 				FE643A1D1C86FFA900E82510 /* DYCClassSelectedView.m */,
 				FE643A221C870A5100E82510 /* DYCWeekView.h */,
 				FE643A231C870A5100E82510 /* DYCWeekView.m */,
+				FE40E1581C8D767A00718711 /* DYCNormalTeachTimeSetView.h */,
+				FE40E1591C8D767A00718711 /* DYCNormalTeachTimeSetView.m */,
 			);
 			path = DYCClassSelect;
 			sourceTree = "<group>";
@@ -461,10 +481,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				FE6439D21C8446F300E82510 /* UIScrollView+DYC.m in Sources */,
+				FE40E15A1C8D767A00718711 /* DYCNormalTeachTimeSetView.m in Sources */,
 				FE6439CC1C84105C00E82510 /* DYCHolderTextView.m in Sources */,
 				FE643A1E1C86FFA900E82510 /* DYCClassSelectedView.m in Sources */,
 				FE643A241C870A5100E82510 /* DYCWeekView.m in Sources */,
 				FE6439CF1C841B9F00E82510 /* DYCEvaluationPopUp.m in Sources */,
+				FE40E1601C8D7B1700718711 /* DYCStringHelper.m in Sources */,
 				89D9EDD71C803C73001AAE27 /* DYCBigEvaHeartView.m in Sources */,
 				89D9EDD31C803757001AAE27 /* TestViewController.m in Sources */,
 				FE6439DE1C86908700E82510 /* UIView+DYC.m in Sources */,
@@ -472,6 +494,8 @@
 				89D9EDA91C80373E001AAE27 /* AppDelegate.m in Sources */,
 				89D9EDA61C80373E001AAE27 /* main.m in Sources */,
 				89D9EDED1C80490E001AAE27 /* DYCLitteEvaHeartView.m in Sources */,
+				FE40E15D1C8D76E500718711 /* UIButton+DYC.m in Sources */,
+				FE40E1661C8D9A3200718711 /* UIImage+DYC.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

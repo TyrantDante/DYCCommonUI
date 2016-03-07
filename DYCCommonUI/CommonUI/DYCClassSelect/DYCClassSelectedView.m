@@ -102,7 +102,9 @@
 
 - (void)setFrame:(CGRect)frame{
     [super setFrame:frame];
-    [self setContentSize:frame.size];
+    if (CGSizeEqualToSize(CGSizeZero, self.contentSize)) {
+        [self setContentSize:frame.size];
+    }
     _columnWidth = self.frame.size.width / _column;
     _rowHeight = self.frame.size.height / _row;
 }
