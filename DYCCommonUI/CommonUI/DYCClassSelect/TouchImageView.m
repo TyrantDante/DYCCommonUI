@@ -10,7 +10,6 @@
 #define NORMALCOLOR [UIColor whiteColor]
 #define SELECTCOLOR [UIColor redColor]
 @interface TouchImageView()
-@property (nonatomic,assign) BOOL select;
 @end
 @implementation TouchImageView
 

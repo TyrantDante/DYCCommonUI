@@ -13,6 +13,7 @@
 @property (nonatomic,assign) NSInteger column;
 @property (nonatomic,assign) CGFloat width;
 @property (nonatomic,assign) CGFloat height;
+@property (nonatomic,assign,readonly) BOOL select;
 - (void)touch;
 - (void)setSelect:(BOOL)select;
 @end

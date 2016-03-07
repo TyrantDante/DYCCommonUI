@@ -13,14 +13,35 @@
 #import "DYCEvaluationPopUp.h"
 #import "UIScrollView+DYC.h"
 #import "DYCClassSelectedView.h"
-@interface TestViewController()<DYCClassSelectedViewDelegate,UITableViewDataSource,UITableViewDelegate>
+@interface TestViewController()<DYCClassSelectedViewDelegate>
 @property (nonatomic,strong) DYCEvaluationPopUp *popUpView;
 @end
 @implementation TestViewController
 - (void)viewDidLoad{
     [super viewDidLoad];
-    [self text2];
+    [self text11];
 }
+
+- (void)text11{
+    self.navigationController.navigationBarHidden = YES;
+    DYCClassSelectedView *selectView = [[DYCClassSelectedView alloc] init];
+    selectView.frame = self.view.bounds;
+    selectView.delegate = self;
+    [self.view addSubview:selectView];
+}
+
+- (NSInteger)rowInSelectView:(DYCClassSelectedView *)selectView{
+    return 12;
+}
+
+- (NSInteger)columnInSelectView:(DYCClassSelectedView *)selectView{
+    return 7;
+}
+
+- (BOOL)statusAtRow:(NSInteger)row column:(NSInteger)column selectView:(DYCClassSelectedView *)selectView{
+    return YES;
+}
+
 - (void)text2{
     self.navigationController.navigationBarHidden = NO;
     self.navigationItem.title = @"12313";
@@ -48,17 +69,6 @@
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
     return 200;
-}
-- (NSInteger)rowInSelectView:(DYCClassSelectedView *)selectView{
-    return 12;
-}
-
-- (NSInteger)columnInSelectView:(DYCClassSelectedView *)selectView{
-    return 7;
-}
-
-- (BOOL)statusAtRow:(NSInteger)row column:(NSInteger)column selectView:(DYCClassSelectedView *)selectView{
-    return NO;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{

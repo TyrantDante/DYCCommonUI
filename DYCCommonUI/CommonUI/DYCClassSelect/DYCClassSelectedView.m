@@ -33,28 +33,32 @@
         _row = 1;
         self.layer.borderColor = [UIColor grayColor].CGColor;
         self.layer.borderWidth = 1.0f;
-        
-
+        _canSlidToSelect = NO;
     }
     return self;
 }
-
+- (void)setCanSlidToSelect:(BOOL)canSlidToSelect{
+    _canSlidToSelect = canSlidToSelect;
+    if (canSlidToSelect) {
+        self.scrollEnabled = NO;
+    }
+}
 - (void)setDelegate:(id<DYCClassSelectedViewDelegate>)delegate{
-    _delegate = delegate;
+    _classDelegate = delegate;
     [self createSubViews];
 }
 
 - (void)createSubViews{
-    if ([_delegate respondsToSelector:@selector(rowInSelectView:)]) {
-        self.row = [_delegate rowInSelectView:self];
+    if ([_classDelegate respondsToSelector:@selector(rowInSelectView:)]) {
+        self.row = [_classDelegate rowInSelectView:self];
     }
-    if ([_delegate respondsToSelector:@selector(columnInSelectView:)]) {
-        self.column = [_delegate columnInSelectView:self];
+    if ([_classDelegate respondsToSelector:@selector(columnInSelectView:)]) {
+        self.column = [_classDelegate columnInSelectView:self];
     }
     for (int i = 0; i < _row; i ++) {
         for (int j = 0 ; j < _column ; j ++) {
-            if ([_delegate respondsToSelector:@selector(statusAtRow:column:selectView:)]) {
-                BOOL status = [_delegate statusAtRow:i column:j selectView:self];
+            if ([_classDelegate respondsToSelector:@selector(statusAtRow:column:selectView:)]) {
+                BOOL status = [_classDelegate statusAtRow:i column:j selectView:self];
                 TouchImageView *touchView = [[TouchImageView alloc] init];
                 touchView.row = i;
                 touchView.column = j;
@@ -76,7 +80,7 @@
         return;
     }
     _row = row;
-    if (self.frame.size.height ){
+    if (self.contentSize.height ){
         _rowHeight = self.frame.size.height / _row;
         return;
     }
@@ -89,8 +93,8 @@
         return;
     }
     _column = column;
-    if (self.frame.size.width) {
-        _columnWidth = self.frame.size.width / _column;
+    if (self.contentSize.width) {
+        _columnWidth = self.contentSize.width / _column;
         return;
     }
     _columnWidth = 0.0f;
@@ -98,8 +102,15 @@
 
 - (void)setFrame:(CGRect)frame{
     [super setFrame:frame];
+    [self setContentSize:frame.size];
     _columnWidth = self.frame.size.width / _column;
     _rowHeight = self.frame.size.height / _row;
+}
+
+- (void)setContentSize:(CGSize)contentSize{
+    [super setContentSize:contentSize];
+    _columnWidth = contentSize.width / _column;
+    _rowHeight = contentSize.height / _row;
 }
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
@@ -131,10 +142,16 @@
         [self addSubview:touchView];
     }
     [touchView touch];
+    if ([_classDelegate respondsToSelector:@selector(didSelectAtRow:column:status:)]) {
+        [_classDelegate didSelectAtRow:touchRow column:touchColumn status:touchView.select];
+    }
 }
 
 - (void)touchesMoved:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
     if (CGRectIsEmpty(self.frame)) {
+        return;
+    }
+    if (!_canSlidToSelect) {
         return;
     }
     UITouch *moveTouch = [touches anyObject];

@@ -37,7 +37,7 @@ Pod::Spec.new do |s|
 
   s.source       = { :git => "https://github.com/TyrantDante/DYCCommonUI.git", :tag => "0.0.2" }
 
-  s.source_files  = "DYCCommonUI/CommonUI/*"
+  s.source_files  = "DYCCommonUI/CommonUI/*","DYCCommonUI/CommonUI/DYCClassSelect/*"
 
 
 

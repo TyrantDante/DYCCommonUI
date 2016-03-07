@@ -12,9 +12,13 @@
 - (NSInteger)rowInSelectView:(DYCClassSelectedView *)selectView;
 - (NSInteger)columnInSelectView:(DYCClassSelectedView *)selectView;
 - (BOOL)statusAtRow:(NSInteger)row column:(NSInteger)column selectView:(DYCClassSelectedView *)selectView;
+- (void)didSelectAtRow:(NSInteger)row column:(NSInteger)column status:(BOOL)staus;
 @end
-@interface DYCClassSelectedView : UIView
-@property (nonatomic,assign) id<DYCClassSelectedViewDelegate> delegate;
+
+
+@interface DYCClassSelectedView : UIScrollView
+@property (nonatomic,assign) id<DYCClassSelectedViewDelegate> classDelegate;
+@property (nonatomic,assign) BOOL canSlidToSelect;
 - (void)setSelect:(BOOL)select byRow:(NSInteger)row;
 - (void)setSelect:(BOOL)select byColumn:(NSInteger)column;
 @end
