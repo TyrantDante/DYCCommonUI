@@ -28,7 +28,7 @@
         self.layer.borderWidth = 1.0f;
         _canSlidToSelect = NO;
         self.backgroundColor = UIColorWithRGB(0xf5, 0xf5, 0xf5);
-        self.contentInset = UIEdgeInsetsMake(-20, 20, 0, 0);
+        self.contentInset = UIEdgeInsetsMake(0, 20, 0, 0);
     }
     return self;
 }
