@@ -17,4 +17,11 @@
  label.attributedText = 【富文本】;
  */
 + (NSAttributedString *)attrStrWithTotalStr:(NSString *)totalStr ttColor:(UIColor *)ttColor ttFont:(UIFont *)ttFont subStr:(NSString *)subStr subColor:(UIColor *)subColor subFont:(UIFont *)subFont;
+/*
+ 功能:  本地化图片，并且获取图片地址
+ 入参:  图片
+ 返回:  图片地址
+ 注意:  
+ */
++ (NSString *)pathBySaveImage:(UIImage *)image;
 @end
