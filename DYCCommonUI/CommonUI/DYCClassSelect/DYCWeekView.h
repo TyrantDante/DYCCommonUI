@@ -7,7 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
-
+@class DYCWeekView;
+@protocol DYCWeekViewDelegate<NSObject>
+- (void)weekView:(DYCWeekView *)weekView didSelectAtIndex:(NSInteger)index;
+- (void)weekView:(DYCWeekView *)weekView didDeselectAtIndex:(NSInteger)index;
+@end
 @interface DYCWeekView : UIView
-
+@property (nonatomic,assign) id<DYCWeekViewDelegate> delegate;
 @end

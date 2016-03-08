@@ -23,4 +23,6 @@
 - (void)startWithTime:(NSInteger)timeLine title:(NSString *)title countDownTitle:(NSString *)subTitle mainColor:(UIColor *)mColor countColor:(UIColor *)color;
 
 - (void)setColor:(UIColor *)color forState:(UIControlState)state frame:(CGRect)frame;
+
+- (void)setBackgroundColor:(UIColor *)color forState:(UIControlState)state;
 @end

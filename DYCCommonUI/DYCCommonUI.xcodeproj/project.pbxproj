@@ -58,6 +58,8 @@
 		FE643A1E1C86FFA900E82510 /* DYCClassSelectedView.m in Sources */ = {isa = PBXBuildFile; fileRef = FE643A1D1C86FFA900E82510 /* DYCClassSelectedView.m */; };
 		FE643A211C8701E900E82510 /* TouchImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = FE643A201C8701E900E82510 /* TouchImageView.m */; };
 		FE643A241C870A5100E82510 /* DYCWeekView.m in Sources */ = {isa = PBXBuildFile; fileRef = FE643A231C870A5100E82510 /* DYCWeekView.m */; };
+		FEEB22DC1C8E97F800B63B8F /* DYCClockView.m in Sources */ = {isa = PBXBuildFile; fileRef = FEEB22DB1C8E97F800B63B8F /* DYCClockView.m */; };
+		FEEB22DF1C8EAF3500B63B8F /* DYCClassShowDifView.m in Sources */ = {isa = PBXBuildFile; fileRef = FEEB22DE1C8EAF3500B63B8F /* DYCClassShowDifView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -150,6 +152,10 @@
 		FE643A201C8701E900E82510 /* TouchImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TouchImageView.m; sourceTree = "<group>"; };
 		FE643A221C870A5100E82510 /* DYCWeekView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DYCWeekView.h; sourceTree = "<group>"; };
 		FE643A231C870A5100E82510 /* DYCWeekView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DYCWeekView.m; sourceTree = "<group>"; };
+		FEEB22DA1C8E97F800B63B8F /* DYCClockView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DYCClockView.h; sourceTree = "<group>"; };
+		FEEB22DB1C8E97F800B63B8F /* DYCClockView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DYCClockView.m; sourceTree = "<group>"; };
+		FEEB22DD1C8EAF3500B63B8F /* DYCClassShowDifView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DYCClassShowDifView.h; sourceTree = "<group>"; };
+		FEEB22DE1C8EAF3500B63B8F /* DYCClassShowDifView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DYCClassShowDifView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -325,6 +331,10 @@
 				FE643A231C870A5100E82510 /* DYCWeekView.m */,
 				FE40E1581C8D767A00718711 /* DYCNormalTeachTimeSetView.h */,
 				FE40E1591C8D767A00718711 /* DYCNormalTeachTimeSetView.m */,
+				FEEB22DA1C8E97F800B63B8F /* DYCClockView.h */,
+				FEEB22DB1C8E97F800B63B8F /* DYCClockView.m */,
+				FEEB22DD1C8EAF3500B63B8F /* DYCClassShowDifView.h */,
+				FEEB22DE1C8EAF3500B63B8F /* DYCClassShowDifView.m */,
 			);
 			path = DYCClassSelect;
 			sourceTree = "<group>";
@@ -485,11 +495,13 @@
 				FE6439CC1C84105C00E82510 /* DYCHolderTextView.m in Sources */,
 				FE643A1E1C86FFA900E82510 /* DYCClassSelectedView.m in Sources */,
 				FE643A241C870A5100E82510 /* DYCWeekView.m in Sources */,
+				FEEB22DF1C8EAF3500B63B8F /* DYCClassShowDifView.m in Sources */,
 				FE6439CF1C841B9F00E82510 /* DYCEvaluationPopUp.m in Sources */,
 				FE40E1601C8D7B1700718711 /* DYCStringHelper.m in Sources */,
 				89D9EDD71C803C73001AAE27 /* DYCBigEvaHeartView.m in Sources */,
 				89D9EDD31C803757001AAE27 /* TestViewController.m in Sources */,
 				FE6439DE1C86908700E82510 /* UIView+DYC.m in Sources */,
+				FEEB22DC1C8E97F800B63B8F /* DYCClockView.m in Sources */,
 				FE643A211C8701E900E82510 /* TouchImageView.m in Sources */,
 				89D9EDA91C80373E001AAE27 /* AppDelegate.m in Sources */,
 				89D9EDA61C80373E001AAE27 /* main.m in Sources */,

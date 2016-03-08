@@ -7,6 +7,7 @@
 //
 #import "TouchImageView.h"
 #import "DYCClassSelectedView.h"
+#define UIColorWithRGB(r, g, b)  [UIColor colorWithRed:(r)/255.f  green:(g)/255.f blue:(b)/255.f alpha:1.f]
 @interface DYCClassSelectedView()
 @property (nonatomic,assign) CGPoint startPoint;
 @property (nonatomic,assign) CGFloat rowHeight;
@@ -18,22 +19,16 @@
 @end
 @implementation DYCClassSelectedView
 
-/*
-// Only override drawRect: if you perform custom drawing.
-// An empty implementation adversely affects performance during animation.
-- (void)drawRect:(CGRect)rect {
-    // Drawing code
-}
-*/
-
 - (instancetype)init{
     self = [super init];
     if (self) {
         _column = 1;
         _row = 1;
-        self.layer.borderColor = [UIColor grayColor].CGColor;
+        self.layer.borderColor = UIColorWithRGB(0xee, 0xee, 0xee).CGColor;
         self.layer.borderWidth = 1.0f;
         _canSlidToSelect = NO;
+        self.backgroundColor = UIColorWithRGB(0xf5, 0xf5, 0xf5);
+        self.contentInset = UIEdgeInsetsMake(-20, 20, 0, 0);
     }
     return self;
 }
@@ -43,8 +38,9 @@
         self.scrollEnabled = NO;
     }
 }
-- (void)setDelegate:(id<DYCClassSelectedViewDelegate>)delegate{
-    _classDelegate = delegate;
+
+- (void)setClassDelegate:(id<DYCClassSelectedViewDelegate>)classDelegate{
+    _classDelegate = classDelegate;
     [self createSubViews];
 }
 
@@ -81,7 +77,7 @@
     }
     _row = row;
     if (self.contentSize.height ){
-        _rowHeight = self.frame.size.height / _row;
+        _rowHeight = self.contentSize.height / _row;
         return;
     }
     _rowHeight = 0.0f;
@@ -103,16 +99,22 @@
 - (void)setFrame:(CGRect)frame{
     [super setFrame:frame];
     if (CGSizeEqualToSize(CGSizeZero, self.contentSize)) {
+        frame.size.width -= 20;
         [self setContentSize:frame.size];
     }
-    _columnWidth = self.frame.size.width / _column;
-    _rowHeight = self.frame.size.height / _row;
 }
 
 - (void)setContentSize:(CGSize)contentSize{
     [super setContentSize:contentSize];
     _columnWidth = contentSize.width / _column;
     _rowHeight = contentSize.height / _row;
+    for (int row = 0; row < _row; row ++) {
+        for (int column = 0; column < _column; column ++) {
+            NSInteger tag = row * 1000 + column + 10000;
+            TouchImageView *touchView = [self viewWithTag:tag];
+            touchView.frame = CGRectMake(column *_columnWidth, row * _rowHeight, _columnWidth, _rowHeight);
+        }
+    }
 }
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
@@ -135,13 +137,7 @@
     
     TouchImageView *touchView = [self viewWithTag:tag];
     if (!touchView) {
-        touchView = [[TouchImageView alloc] init];
-        touchView.row = touchRow;
-        touchView.column = touchColumn;
-        touchView.width = _columnWidth;
-        touchView.height = _rowHeight;
-        touchView.tag = tag;
-        [self addSubview:touchView];
+        return;
     }
     [touchView touch];
     if ([_classDelegate respondsToSelector:@selector(didSelectAtRow:column:status:)]) {
@@ -205,6 +201,9 @@
         NSInteger tag = row * 1000 + i + 10000;
         TouchImageView *touchView = [self viewWithTag:tag];
         [touchView setSelect:select];
+        if ([_classDelegate respondsToSelector:@selector(didSelectAtRow:column:status:)]) {
+            [_classDelegate didSelectAtRow:row column:i status:select];
+        }
     }
 }
 - (void)setSelect:(BOOL)select byColumn:(NSInteger)column{
@@ -212,6 +211,9 @@
         NSInteger tag = i * 1000 + column + 10000;
         TouchImageView *touchView = [self viewWithTag:tag];
         [touchView setSelect:select];
+        if ([_classDelegate respondsToSelector:@selector(didSelectAtRow:column:status:)]) {
+            [_classDelegate didSelectAtRow:i column:column status:select];
+        }
     }
 }
 @end

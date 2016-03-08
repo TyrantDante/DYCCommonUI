@@ -12,8 +12,8 @@
 #import "DYCHolderTextView.h"
 #import "DYCEvaluationPopUp.h"
 #import "UIScrollView+DYC.h"
-#import "DYCClassSelectedView.h"
-@interface TestViewController()<DYCClassSelectedViewDelegate>
+#import "DYCNormalTeachTimeSetView.h"
+@interface TestViewController()
 @property (nonatomic,strong) DYCEvaluationPopUp *popUpView;
 @end
 @implementation TestViewController
@@ -24,22 +24,12 @@
 
 - (void)text11{
     self.navigationController.navigationBarHidden = YES;
-    DYCClassSelectedView *selectView = [[DYCClassSelectedView alloc] init];
-    selectView.frame = self.view.bounds;
-    selectView.delegate = self;
+    DYCNormalTeachTimeSetView *selectView = [[DYCNormalTeachTimeSetView alloc] init];
+    CGRect frame = self.view.bounds;
+    frame.origin.y += 64;
+    frame.size.height -= 64;
+    selectView.frame = frame;
     [self.view addSubview:selectView];
-}
-
-- (NSInteger)rowInSelectView:(DYCClassSelectedView *)selectView{
-    return 12;
-}
-
-- (NSInteger)columnInSelectView:(DYCClassSelectedView *)selectView{
-    return 7;
-}
-
-- (BOOL)statusAtRow:(NSInteger)row column:(NSInteger)column selectView:(DYCClassSelectedView *)selectView{
-    return YES;
 }
 
 - (void)text2{

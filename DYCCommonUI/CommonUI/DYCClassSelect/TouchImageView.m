@@ -7,8 +7,10 @@
 //
 
 #import "TouchImageView.h"
+#define UIColorWithRGB(r, g, b)  [UIColor colorWithRed:(r)/255.f  green:(g)/255.f blue:(b)/255.f alpha:1.f]
+
 #define NORMALCOLOR [UIColor whiteColor]
-#define SELECTCOLOR [UIColor redColor]
+#define SELECTCOLOR UIColorWithRGB(0x23, 0xc3, 0xc1)
 @interface TouchImageView()
 @end
 @implementation TouchImageView
@@ -24,7 +26,7 @@
     self = [super init];
     if (self) {
         self.select = NO;
-        self.layer.borderColor = [UIColor grayColor].CGColor;
+        self.layer.borderColor = UIColorWithRGB(0xee, 0xee, 0xee).CGColor;
         self.layer.borderWidth = 0.5f;
     }
     return self;

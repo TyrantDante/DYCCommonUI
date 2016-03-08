@@ -68,4 +68,11 @@
 }
 
 
+- (void)setBackgroundColor:(UIColor *)color forState:(UIControlState)state{
+    UIImage *image = [UIButton imageWithColor:color frame:CGRectMake(0.0f, 0.0f, 1.0f, 1.0f)];
+
+    [self setBackgroundImage:image forState:state];
+}
+
+
 @end
