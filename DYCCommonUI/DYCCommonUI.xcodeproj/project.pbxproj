@@ -60,6 +60,7 @@
 		FE643A241C870A5100E82510 /* DYCWeekView.m in Sources */ = {isa = PBXBuildFile; fileRef = FE643A231C870A5100E82510 /* DYCWeekView.m */; };
 		FEEB22DC1C8E97F800B63B8F /* DYCClockView.m in Sources */ = {isa = PBXBuildFile; fileRef = FEEB22DB1C8E97F800B63B8F /* DYCClockView.m */; };
 		FEEB22DF1C8EAF3500B63B8F /* DYCClassShowDifView.m in Sources */ = {isa = PBXBuildFile; fileRef = FEEB22DE1C8EAF3500B63B8F /* DYCClassShowDifView.m */; };
+		FEEB22EC1C8FBF9600B63B8F /* DYCCarouselView.m in Sources */ = {isa = PBXBuildFile; fileRef = FEEB22EB1C8FBF9600B63B8F /* DYCCarouselView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -156,6 +157,8 @@
 		FEEB22DB1C8E97F800B63B8F /* DYCClockView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DYCClockView.m; sourceTree = "<group>"; };
 		FEEB22DD1C8EAF3500B63B8F /* DYCClassShowDifView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DYCClassShowDifView.h; sourceTree = "<group>"; };
 		FEEB22DE1C8EAF3500B63B8F /* DYCClassShowDifView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DYCClassShowDifView.m; sourceTree = "<group>"; };
+		FEEB22EA1C8FBF9600B63B8F /* DYCCarouselView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DYCCarouselView.h; sourceTree = "<group>"; };
+		FEEB22EB1C8FBF9600B63B8F /* DYCCarouselView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DYCCarouselView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -288,6 +291,8 @@
 				FE40E15F1C8D7B1700718711 /* DYCStringHelper.m */,
 				FE40E1641C8D9A3200718711 /* UIImage+DYC.h */,
 				FE40E1651C8D9A3200718711 /* UIImage+DYC.m */,
+				FEEB22EA1C8FBF9600B63B8F /* DYCCarouselView.h */,
+				FEEB22EB1C8FBF9600B63B8F /* DYCCarouselView.m */,
 			);
 			path = CommonUI;
 			sourceTree = "<group>";
@@ -505,6 +510,7 @@
 				FE643A211C8701E900E82510 /* TouchImageView.m in Sources */,
 				89D9EDA91C80373E001AAE27 /* AppDelegate.m in Sources */,
 				89D9EDA61C80373E001AAE27 /* main.m in Sources */,
+				FEEB22EC1C8FBF9600B63B8F /* DYCCarouselView.m in Sources */,
 				89D9EDED1C80490E001AAE27 /* DYCLitteEvaHeartView.m in Sources */,
 				FE40E15D1C8D76E500718711 /* UIButton+DYC.m in Sources */,
 				FE40E1661C8D9A3200718711 /* UIImage+DYC.m in Sources */,

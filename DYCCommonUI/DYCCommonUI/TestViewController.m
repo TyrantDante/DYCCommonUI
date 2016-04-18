@@ -13,13 +13,58 @@
 #import "DYCEvaluationPopUp.h"
 #import "UIScrollView+DYC.h"
 #import "DYCNormalTeachTimeSetView.h"
-@interface TestViewController()
+#import "DYCCarouselView.h"
+@interface TestViewController()<DYCCarouselViewDelegate>
 @property (nonatomic,strong) DYCEvaluationPopUp *popUpView;
 @end
 @implementation TestViewController
 - (void)viewDidLoad{
     [super viewDidLoad];
-    [self text11];
+    [self text111];
+}
+
+- (void)text111{
+    UIView *view = [[UIView alloc] init];
+    view.frame = CGRectMake(100,100, 50, 50);
+    [self.view addSubview:view];
+    view.layer.speed = 0.5;
+    view.layer.opacity = 1.0;
+    
+    CABasicAnimation *anim = [CABasicAnimation animationWithKeyPath:@"contents"];
+    anim.duration = 1.f;
+    anim.fromValue = (id)[UIImage imageNamed:@"icon_comment_heart_empty"].CGImage;
+    anim.toValue = (id)[UIImage imageNamed:@"icon_comment_heart"].CGImage;
+    //    anim.byValue  = (id)[UIImage imageNamed:@"3.png"].CGImage;
+    //    anim.toValue = (id)[UIColor redColor].CGColor;
+    //    anim.fromValue =  (id)[UIColor blackColor].CGColor;
+    anim.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseInEaseOut];
+    anim.repeatCount = CGFLOAT_MAX;
+    anim.autoreverses = YES;
+    
+    [view.layer addAnimation:anim forKey:@"contents"];
+
+}
+
+- (void)text22{
+    DYCCarouselView *carView = [[DYCCarouselView alloc] init];
+    carView.frame = self.view.bounds;
+    carView.delegate = self;
+    [self.view addSubview:carView];
+}
+
+- (UIView *)carouselView:(DYCCarouselView *)carouselView currentView:(UIView *)currentView{
+    currentView.backgroundColor = [UIColor redColor];
+    return currentView;
+}
+
+- (UIView *)carouselView:(DYCCarouselView *)carouselView lastView:(UIView *)lastView{
+    lastView.backgroundColor = [UIColor blueColor];
+    return lastView;
+}
+
+- (UIView *)carouselView:(DYCCarouselView *)carouselView nextView:(UIView *)nextView{
+    nextView.backgroundColor = [UIColor yellowColor];
+    return nextView;
 }
 
 - (void)text11{
