@@ -14,10 +14,10 @@
 		FE0F77C61D348ACB000C7944 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = FE0F77BE1D348ACB000C7944 /* Info.plist */; };
 		FE0F77C71D348ACB000C7944 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FE0F77BF1D348ACB000C7944 /* main.m */; };
 		FE0F77C81D348ACB000C7944 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FE0F77C11D348ACB000C7944 /* ViewController.m */; };
-		FE0F77CC1D348B06000C7944 /* UIScrollView+DTHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = FE0F77CB1D348B06000C7944 /* UIScrollView+DTHeader.m */; };
-		FE0F77CF1D348E1F000C7944 /* DTHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = FE0F77CE1D348E1F000C7944 /* DTHeader.m */; };
-		FEC299F51D3CCF82000BC668 /* DTNormalHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = FEC299F41D3CCF82000BC668 /* DTNormalHeader.m */; };
 		FEC299F91D3CD00F000BC668 /* UIView+DTBusyMark.m in Sources */ = {isa = PBXBuildFile; fileRef = FEC299F81D3CD00F000BC668 /* UIView+DTBusyMark.m */; };
+		FEC29A011D3CD0CE000BC668 /* DTHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = FEC299FC1D3CD0CE000BC668 /* DTHeader.m */; };
+		FEC29A021D3CD0CE000BC668 /* DTNormalHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = FEC299FE1D3CD0CE000BC668 /* DTNormalHeader.m */; };
+		FEC29A031D3CD0CE000BC668 /* UIScrollView+DTHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = FEC29A001D3CD0CE000BC668 /* UIScrollView+DTHeader.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,15 +31,15 @@
 		FE0F77BF1D348ACB000C7944 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		FE0F77C01D348ACB000C7944 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		FE0F77C11D348ACB000C7944 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		FE0F77CA1D348B06000C7944 /* UIScrollView+DTHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIScrollView+DTHeader.h"; sourceTree = "<group>"; };
-		FE0F77CB1D348B06000C7944 /* UIScrollView+DTHeader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView+DTHeader.m"; sourceTree = "<group>"; };
-		FE0F77CD1D348E1F000C7944 /* DTHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTHeader.h; sourceTree = "<group>"; };
-		FE0F77CE1D348E1F000C7944 /* DTHeader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DTHeader.m; sourceTree = "<group>"; };
 		FEC299F21D3CABAB000BC668 /* pch_test_header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = pch_test_header.h; sourceTree = "<group>"; };
-		FEC299F31D3CCF82000BC668 /* DTNormalHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTNormalHeader.h; sourceTree = "<group>"; };
-		FEC299F41D3CCF82000BC668 /* DTNormalHeader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DTNormalHeader.m; sourceTree = "<group>"; };
 		FEC299F71D3CD00F000BC668 /* UIView+DTBusyMark.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+DTBusyMark.h"; sourceTree = "<group>"; };
 		FEC299F81D3CD00F000BC668 /* UIView+DTBusyMark.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+DTBusyMark.m"; sourceTree = "<group>"; };
+		FEC299FB1D3CD0CE000BC668 /* DTHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTHeader.h; sourceTree = "<group>"; };
+		FEC299FC1D3CD0CE000BC668 /* DTHeader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DTHeader.m; sourceTree = "<group>"; };
+		FEC299FD1D3CD0CE000BC668 /* DTNormalHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTNormalHeader.h; sourceTree = "<group>"; };
+		FEC299FE1D3CD0CE000BC668 /* DTNormalHeader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DTNormalHeader.m; sourceTree = "<group>"; };
+		FEC299FF1D3CD0CE000BC668 /* UIScrollView+DTHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIScrollView+DTHeader.h"; sourceTree = "<group>"; };
+		FEC29A001D3CD0CE000BC668 /* UIScrollView+DTHeader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView+DTHeader.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,8 +56,8 @@
 		FE0F77931D348A95000C7944 = {
 			isa = PBXGroup;
 			children = (
+				FEC299FA1D3CD0CE000BC668 /* DTRefreshSuper */,
 				FEC299F61D3CCFE2000BC668 /* DTBusyMark */,
-				FE0F77C91D348AE1000C7944 /* DTRefresh */,
 				FE0F77B61D348ACB000C7944 /* DTRefreshTest */,
 				FE0F779D1D348A95000C7944 /* Products */,
 			);
@@ -88,19 +88,6 @@
 			path = DTRefreshTest;
 			sourceTree = "<group>";
 		};
-		FE0F77C91D348AE1000C7944 /* DTRefresh */ = {
-			isa = PBXGroup;
-			children = (
-				FE0F77CA1D348B06000C7944 /* UIScrollView+DTHeader.h */,
-				FE0F77CB1D348B06000C7944 /* UIScrollView+DTHeader.m */,
-				FE0F77CD1D348E1F000C7944 /* DTHeader.h */,
-				FE0F77CE1D348E1F000C7944 /* DTHeader.m */,
-				FEC299F31D3CCF82000BC668 /* DTNormalHeader.h */,
-				FEC299F41D3CCF82000BC668 /* DTNormalHeader.m */,
-			);
-			path = DTRefresh;
-			sourceTree = "<group>";
-		};
 		FEC299F61D3CCFE2000BC668 /* DTBusyMark */ = {
 			isa = PBXGroup;
 			children = (
@@ -108,6 +95,19 @@
 				FEC299F81D3CD00F000BC668 /* UIView+DTBusyMark.m */,
 			);
 			path = DTBusyMark;
+			sourceTree = "<group>";
+		};
+		FEC299FA1D3CD0CE000BC668 /* DTRefreshSuper */ = {
+			isa = PBXGroup;
+			children = (
+				FEC299FB1D3CD0CE000BC668 /* DTHeader.h */,
+				FEC299FC1D3CD0CE000BC668 /* DTHeader.m */,
+				FEC299FD1D3CD0CE000BC668 /* DTNormalHeader.h */,
+				FEC299FE1D3CD0CE000BC668 /* DTNormalHeader.m */,
+				FEC299FF1D3CD0CE000BC668 /* UIScrollView+DTHeader.h */,
+				FEC29A001D3CD0CE000BC668 /* UIScrollView+DTHeader.m */,
+			);
+			path = DTRefreshSuper;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -182,12 +182,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				FE0F77C81D348ACB000C7944 /* ViewController.m in Sources */,
-				FE0F77CC1D348B06000C7944 /* UIScrollView+DTHeader.m in Sources */,
 				FEC299F91D3CD00F000BC668 /* UIView+DTBusyMark.m in Sources */,
-				FE0F77CF1D348E1F000C7944 /* DTHeader.m in Sources */,
+				FEC29A011D3CD0CE000BC668 /* DTHeader.m in Sources */,
 				FE0F77C71D348ACB000C7944 /* main.m in Sources */,
 				FE0F77C21D348ACB000C7944 /* AppDelegate.m in Sources */,
-				FEC299F51D3CCF82000BC668 /* DTNormalHeader.m in Sources */,
+				FEC29A031D3CD0CE000BC668 /* UIScrollView+DTHeader.m in Sources */,
+				FEC29A021D3CD0CE000BC668 /* DTNormalHeader.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
