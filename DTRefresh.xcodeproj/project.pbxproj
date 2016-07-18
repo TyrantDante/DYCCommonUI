@@ -17,6 +17,7 @@
 		FE0F77CC1D348B06000C7944 /* UIScrollView+DTHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = FE0F77CB1D348B06000C7944 /* UIScrollView+DTHeader.m */; };
 		FE0F77CF1D348E1F000C7944 /* DTHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = FE0F77CE1D348E1F000C7944 /* DTHeader.m */; };
 		FEC299F51D3CCF82000BC668 /* DTNormalHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = FEC299F41D3CCF82000BC668 /* DTNormalHeader.m */; };
+		FEC299F91D3CD00F000BC668 /* UIView+DTBusyMark.m in Sources */ = {isa = PBXBuildFile; fileRef = FEC299F81D3CD00F000BC668 /* UIView+DTBusyMark.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +38,8 @@
 		FEC299F21D3CABAB000BC668 /* pch_test_header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = pch_test_header.h; sourceTree = "<group>"; };
 		FEC299F31D3CCF82000BC668 /* DTNormalHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTNormalHeader.h; sourceTree = "<group>"; };
 		FEC299F41D3CCF82000BC668 /* DTNormalHeader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DTNormalHeader.m; sourceTree = "<group>"; };
+		FEC299F71D3CD00F000BC668 /* UIView+DTBusyMark.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+DTBusyMark.h"; sourceTree = "<group>"; };
+		FEC299F81D3CD00F000BC668 /* UIView+DTBusyMark.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+DTBusyMark.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +56,7 @@
 		FE0F77931D348A95000C7944 = {
 			isa = PBXGroup;
 			children = (
+				FEC299F61D3CCFE2000BC668 /* DTBusyMark */,
 				FE0F77C91D348AE1000C7944 /* DTRefresh */,
 				FE0F77B61D348ACB000C7944 /* DTRefreshTest */,
 				FE0F779D1D348A95000C7944 /* Products */,
@@ -95,6 +99,15 @@
 				FEC299F41D3CCF82000BC668 /* DTNormalHeader.m */,
 			);
 			path = DTRefresh;
+			sourceTree = "<group>";
+		};
+		FEC299F61D3CCFE2000BC668 /* DTBusyMark */ = {
+			isa = PBXGroup;
+			children = (
+				FEC299F71D3CD00F000BC668 /* UIView+DTBusyMark.h */,
+				FEC299F81D3CD00F000BC668 /* UIView+DTBusyMark.m */,
+			);
+			path = DTBusyMark;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -170,6 +183,7 @@
 			files = (
 				FE0F77C81D348ACB000C7944 /* ViewController.m in Sources */,
 				FE0F77CC1D348B06000C7944 /* UIScrollView+DTHeader.m in Sources */,
+				FEC299F91D3CD00F000BC668 /* UIView+DTBusyMark.m in Sources */,
 				FE0F77CF1D348E1F000C7944 /* DTHeader.m in Sources */,
 				FE0F77C71D348ACB000C7944 /* main.m in Sources */,
 				FE0F77C21D348ACB000C7944 /* AppDelegate.m in Sources */,
