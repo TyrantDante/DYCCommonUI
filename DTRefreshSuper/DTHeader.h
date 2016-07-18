@@ -39,4 +39,9 @@ typedef NS_ENUM(NSInteger, DTRefreshState) {
 - (void)scrollViewContentOffSetChanged:(NSDictionary *)change;
 
 - (void)panGesturerStatueChanged:(NSDictionary *)change;
+
+#pragma mark refresh start end 
+- (void)startRefresh;
+- (void)endRefresh;
+- (BOOL)isRefreshing;
 @end
